@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/df4f524a0b.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        body {
+        font-family: 'Poppins'
+        }
+        /* displaying both things */
+        #display{
+            display: flex;
+            gap: 20px;
+        }
+        /* sidebar */
+        #sidebar{
+            border: 1px solid rgb(192, 192, 192);
+            width: 20%;
+            padding:15px;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+        #filtertag{
+            color:grey;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 0px;
+        }
+        /* searchbar */
+        #searchtag{
+            margin-bottom: 5px;
+        }
+        #search{
+            width: 90%;
+            padding: 8px;
+        }
+        /* pricerange */
+        #pricebar>h4{
+            margin-bottom: 5px;
+            /* text-decoration: underline; */
+        }
+        select{
+            width: 49%;
+            padding:8px 0px 5px 10px;
+            border:  1px solid rgb(230, 230, 230);
+            font-size: 20px;
+        }
+        /* seg_bar */
+        #segtag{
+            margin-bottom: 0px;
+            color: grey;
+        }
+        .selection{
+            display: flex;
+            align-items: center;
+            height: 8vh;
+            font-size: 20px;
+            /* padding: 10px 0px; */
+            color: rgb(167, 167, 167);
+        }
+        .selection>h5{
+            /* height: 20px; */
+            margin-left: 15px;
+        }
+        /* fuelbar */
+        #fueltag{
+            margin-bottom: 0px;
+            color: grey;
+        }
+        /* transmission bar */
+        #transtag{
+            margin-bottom: 0px;
+            color: grey;
+        }
+
+
+        /* /containor */ 
+        #containor{
+            width: 100%;
+        }
+        .card{
+            display: flex;
+            width: 100%;
+            margin: 15px 0px 0px 0px;
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+            border-radius: 10px;
+        }
+        .image_box{
+            width: 30%;
+            height: 90%;
+            margin-top: 1.5%;
+        }
+        .image_box>img{
+            width: 100%;
+            height: 100%;
+        }
+        .info_box{
+            width:50%;
+            padding-left: 2vw;
+        }
+        .info_box>div{
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        .info_box>div>h3{
+            margin-right: 25%;
+            font-size: 20px;
+        }
+        .fa-solid {
+            margin-right: 5px;
+            font-size: 20px;
+        }
+        .price_box{
+            width: 20%;
+            height: auto;
+            margin-top: 1.5%;
+        }
+        .price_box_div{
+            display: flex;
+            text-align: center;
+            padding: 2px;
+        }
+        .price_box_div>h1{
+            font-weight: bold;
+            margin: 0px;
+            font-size: 27px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .price_box_div>h2,.tag{
+            margin: 0px ;
+            font-size: 20px;
+            color: rgb(99, 99, 99);
+        }
+        .price_box >h3{
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-top: 0px;
+            text-decoration: line-through;
+            color: rgb(182, 182, 182);
+        }
+        /* tempo_ image */
+        #temp_card {
+            display: flex;
+            width: 100%;
+            margin: 15px 0px 0px 0px;
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+            border-radius: 10px;
+        }
+        #temp_card >img {
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="display">
+        <div id="sidebar">
+            <h4 id="filtertag">Filter By</h4>
+            <h4 id="searchtag">Search</h4>
+            <div id="searchbar">
+                <input oninput="callmeinput(callme,1000)" type="text" id="search" placeholder="🔍 search by car model">
+                <div id="search_containor"></div>
+            </div>
+    
+            <div id="pricebar">
+                <h4>Price range</h4>
+                <select onchange="callmemin()" id="min">
+                    <option value="">Min</option>
+                    <option value="15000">15000</option>
+                    <option value="20000">20000</option>
+                    <option value="25000">25000</option>
+                    <option value="30000">30000</option>
+                </select>
+                <select onchange="callmemax()" id="max">
+                    <option value="">Max</option>
+                    <option value="35000">35000</option>
+                    <option value="30000">30000</option>
+                    <option value="25000">25000</option>
+                    <option value="20000">20000</option>
+                </select>
+            </div>
+    
+            <div id="seg_bar">
+                <h4 id="segtag">Segment</h4>
+                <div class="selection">
+                    <input onclick="callme_hatchback()" type="checkbox" id="hatchback_checkbox" value="hatchback">
+                    <h5>Hatchback</h5>
+                </div>
+                <div class="selection">
+                    <input onclick="callme_sadan()" type="checkbox" id="sadan_checkbox" value="sadan">
+                    <h5>Sadan</h5>
+                </div>
+                <div class="selection">
+                    <input onclick="callme_suv()" type="checkbox" id="suv_checkbox" value="suv">
+                    <h5>SUV/MUV</h5>
+                </div>
+            </div>
+    
+            <div id="fuel_bar">
+                <h4 id="fueltag">Fuel</h4>
+                <div class="selection">
+                    <input onclick="callme_petrol()" type="checkbox" id="petrol_checkbox" value="Petrol">
+                    <h5>Petrol</h5>
+                </div>
+                <div class="selection">
+                    <input onclick="callme_diesel()" type="checkbox" id="diesel_checkbox" value="Diesel">
+                    <h5>Deisel</h5>
+                </div>
+            </div>
+    
+            <div id="trans_bar">
+                <h4 id="transtag">Transmission</h4>
+                <div class="selection">
+                    <input onclick="callme_automatic()" type="checkbox" id="automatic_checkbox" value="Automatic">
+                    <h5>Automatic</h5>
+                </div>
+                <div class="selection">
+                    <input onclick="callme_manual()" type="checkbox" id="manual_checkbox" value="Manual">
+                    <h5>Manual</h5>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2><span id="count"> </span>  Unboxed Hyundai cars for subscription</h2>
+            <div id="containor">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let id;
+    let serach_box = document.getElementById("search_containor")
+    // input searching output
+    function callmeinput(funct,delay){
+        event.preventDefault();
+        id = setTimeout( () => {
+            funct();
+        },delay)
+    }
+    if(id){
+        clearTimeout(id);
+    }
+
+    function callme(){
+        let res = document.getElementById("search").value;
+        res=res.toLocaleLowerCase();
+        let reply_arr = database.filter( (ele) => {
+            let temp_name = ele.name.toLocaleLowerCase();
+            if(temp_name.includes(res)){
+              return ele;
+            }
+        })
+        if(reply_arr.length!=0){
+            display(reply_arr);
+        }else{
+            display(database)
+        }
+    }
+    // sorting based on hatchback segment
+    function callme_hatchback(){
+    let reply = document.getElementById("hatchback_checkbox");
+    if(reply.checked==true){
+       let sorted_data = database.filter( (ele) => {
+        if(ele.seg == reply.value){
+            return  ele;
+        }
+       })
+       display(sorted_data)
+    }else {
+       display(database)
+    }
+    }
+    // sorting based on sadan segment
+    function callme_sadan(){
+    let reply = document.getElementById("sadan_checkbox");
+    if(reply.checked==true){
+       let sorted_data = database.filter( (ele) => {
+        if(ele.seg == reply.value){
+            return  ele;
+        }
+       })
+       display(sorted_data)
+    }else {
+       display(database)
+    }
+    }
+    // sorting based on suv segment
+    function callme_suv(){
+    let reply = document.getElementById("suv_checkbox");
+    if(reply.checked==true){
+       let sorted_data = database.filter( (ele) => {
+        if(ele.seg == reply.value){
+            return  ele;
+        }
+       })
+       display(sorted_data)
+    }else {
+       display(database)
+    }
+    }
+    // sorting based on petrol fuel
+    function callme_petrol(){
+    let reply = document.getElementById("petrol_checkbox");
+    if(reply.checked==true){
+       let sorted_data = database.filter( (ele) => {
+        if(ele.fuel == reply.value){
+            return  ele;
+        }
+       })
+       display(sorted_data)
+    }else {
+       display(database)
+    }
+    }
+    // sorting based on diesel fuel
+    function callme_diesel(){
+        let reply = document.getElementById("diesel_checkbox");
+        if(reply.checked==true){
+            let sorted_data = database.filter( (ele) => {
+                if(ele.fuel == reply.value){
+                    return  ele;
+                }
+            })
+            display(sorted_data)
+        }else {
+            display(database)
+        }
+    }
+    // sorting based on automatic transmission
+    function callme_automatic(){
+        console.log("Hello")
+    let reply = document.getElementById("automatic_checkbox");
+    if(reply.checked==true){
+       let sorted_data = database.filter( (ele) => {
+        if(ele.trans == reply.value){
+            return  ele;
+        }
+       })
+       display(sorted_data)
+    }else {
+       display(database)
+    }
+    }
+    // sorting based on manual transmission
+    function callme_manual(){
+    let reply = document.getElementById("manual_checkbox");
+    if(reply.checked==true){
+       let sorted_data = database.filter( (ele) => {
+        if(ele.trans == reply.value){
+            return  ele;
+        }
+       })
+       display(sorted_data)
+    }else {
+       display(database)
+    }
+    }
+   
+   
+   
+    // {image:'',name:'',fuel:'',trans:'', price:'',f_price:''},
+    // {image:'',name:'',fuel:'',trans:'', price:'',f_price:''},
+    // {image:'',name:'',fuel:'',trans:'', price:'',f_price:''},
+    
+    let database=[
+        {image:'https://s3-us-west-2.amazonaws.com/revvselfdrivecar/Open/Hatchback_new/Hyundai_grand_i10.jpg',name:'Hyundai Grand i10',seg:"hatchback" ,fuel:'Diesel',trans:'Manual', price:16899,f_price:18799},
+        {image:'https://s3-us-west-2.amazonaws.com/revvselfdrivecar/Open/Sedan_new/hyundai_xcent.jpg',name:'Hyndai Xcent',seg:"sadan",fuel:'Diesel',trans:'Manual', price:22199,f_price:24199},
+        {image:'https://s3-us-west-2.amazonaws.com/revvselfdrivecar/Open/Hatchback_new/Hyundai_eon.jpg',name:'Hyndai Eon',seg:"hatchback" ,fuel:'Petrol',trans:'Manual', price:16499,f_price:18499},
+        {image:'https://s3-us-west-2.amazonaws.com/revvselfdrivecar/Open/Hatchback_new/hyundai_santro.jpg',name:'Hyndai Santro',seg:"hatchback" ,fuel:'Petrol',trans:'Automatic', price:15499,f_price:17499},
+        {image:'https://s3-us-west-2.amazonaws.com/revvselfdrivecar/Open/SUV_new/Hyundai_creta.jpg',name:'Hyndai Creta',seg:"suv",fuel:'Diesel',trans:'Automatic', price:30399,f_price:32399},
+        {image:'https://s3-us-west-2.amazonaws.com/revvselfdrivecar/Open/Hatchback_new/hyundai_santro.jpg',name:'Hyndai Santro',seg:"hatchback" ,fuel:'Petrol',trans:'Manual', price:19699,f_price:21699},
+    ]
+    let box=document.getElementById("containor");
+    display(database)
+    
+    function display(data){
+        box.innerHTML="";
+        let count =0;
+        data.forEach( (ele,i) => {
+            if(i==2){
+                let temp_div = document.createElement("div");
+                temp_div.id="temp_card";
+                let temp_image = document.createElement("img");
+                temp_image.src = `https://revvselfdrivecar.s3-us-west-2.amazonaws.com/Open/prop-cards/destkop/safe.svg`;
+                box.append(temp_div);
+                temp_div.append(temp_image);
+            }
+            let div = document.createElement("div");
+            div.className="card";
+            let div1 = document.createElement("div");
+            div1.className="image_box";
+            let image = document.createElement("img");
+            image.src=ele.image;
+            let div2 = document.createElement("div");
+            div2.className="info_box";
+            let name = document.createElement("h2");
+            name.innerText=ele.name;
+            let tag = document.createElement("h3");
+            tag.innerText="Unboxed";
+            tag.className="tag";
+            let div2_1 = document.createElement("div");
+            let sym_1 = document.createElement("i");
+            sym_1.className="fa-solid fa-gas-pump";
+            let fuel =document.createElement("h3");
+            fuel.innerText=ele.fuel;
+            let sym_2 = document.createElement("i");
+            sym_2.className="fa-solid fa-user-gear";
+            let trans =document.createElement("h3");
+            trans.innerText=ele.trans;
+            let div3 = document.createElement("div");
+            div3.className="price_box";
+            let div3_1 = document.createElement("div");
+            div3_1.className="price_box_div"
+            let price = document.createElement("h1");
+            price.innerText=`₹ ${ele.price} /`;
+            let price_after = document.createElement("h2");
+            price_after.innerText=`month`;
+            let f_price = document.createElement("h3");
+            f_price.innerText=`₹ ${ele.f_price}`;
+            box.append(div);
+            div.append(div1,div2,div3);
+            div1.append(image);
+            div2.append(name,tag,div2_1);
+            div2_1.append(sym_1,fuel,sym_2,trans);
+            div3.append(div3_1,f_price);
+            div3_1.append(price,price_after);
+            count++;
+            document.getElementById("count").innerText=count;
+        });
+    }
+
+    // filter by minimum price:
+    function callmemin(){
+        event.preventDefault();
+        let reply = document.getElementById("min").value;
+        if(reply==""){
+            display(database);
+        }else{
+            reply =Number(reply)
+            let sorted_data = database.filter( (ele) => {
+                if(ele.price > reply){
+                    return ele;
+                }
+            })
+            display(sorted_data);
+        }
+    }
+
+    // filter by maximum price:
+    function callmemax(){
+        event.preventDefault();
+        let reply = document.getElementById("max").value;
+        if(reply==""){
+            display(database);
+        }else{
+            reply =Number(reply)
+            let sorted_data = database.filter( (ele) => {
+                if(ele.price < reply){
+                    console.log("Hello")
+                    return ele;
+                }
+            })
+            display(sorted_data);
+        }
+    }
+</script>
