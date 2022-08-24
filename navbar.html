@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+#navbar1{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    
+}
+#navbar1>div+div{
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 10px;
+    
+    width: 700px;
+    padding-top: 10px;
+}
+#navbar1>div{
+margin-left: 100px;
+
+}
+.border{
+  
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+ 
+    margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    
+}
+
+#sanitised{
+    margin-top: -13px;
+    font-size: 13px;
+    margin-left:22px
+}
+.border:hover,.nav_color:hover{
+    color: aqua;
+}
+.nav_color{
+    padding-top: 5px;
+}
+#exit_Log{
+    margin-right: -40px;
+}
+</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+</head>
+<body>
+    <div id="navbar1">
+        <div>
+            <div><img src="https://www.revv.co.in/grapheneImages/newopen/logo.svg" alt="No internet connection">
+            <div id="sanitised">sanitised,safe</div></div>
+        </div>
+        <div >
+            <div class="border"><b>Hyundai</b> Subscription</div>
+            <div class="border"><b>Mahindra</b> Subscription</div>
+            <div class="nav_color">FAQs</div>
+            <div id="exit_Log"><img src="	https://www.revv.co.in/grapheneImages/newopen/ic-web-profile-login.svg" alt="error"></div>
+            <div class="nav_color">Login or Signup</div>
+        </div>
+    </div>
+</body>
+</html>
