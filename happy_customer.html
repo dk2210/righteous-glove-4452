@@ -1,0 +1,218 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        #home_happy_Customer{
+            display: flex;
+            justify-content: space-between;
+        }
+        #home_happy_Customer button{
+            margin-top: 35px;
+        }
+        #Happy_Customer_slider{
+            border: 2px solid red;
+            width: 90%;
+            margin: auto;
+        }
+        #Happy_Customer{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+        }
+        #Happy_Customer>div{
+            width: 250px;
+            height: 250px;
+            padding: 10px;
+            /* background-color: aqua; */
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+
+    </style>
+    <body>
+        <div id="Happy_Customer_slider">
+            <div id="home_happy_Customer">
+                  <h1 style="color: grey;">Happy Customers</h1>
+               <div><button class="button1"><</button> <button class="button1">></button></div> 
+              </div>
+              <div id="Happy_Customer">
+                <!-- append the data  -->
+              </div>
+        </div>        </html>
+</body>
+</html>
+<script>
+    let arrOfDetails=[
+        {name:"Sachin pandey ",discription:"withervice with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickup"},
+        {name:"Prakash gariya",discription:"withervice with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickup"},
+        {name:"Sunil Rawat ",discription:"withervice with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickup"},
+        {name:"Shivam Kumar ",discription:"withervice with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickup"},
+        {name:"Lalit Sharma",discription:"withervice with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickup"}
+        ,{name:"Abhishek lathha",discription:"withervice with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickup"},
+        {name:"Akshit  bisht",discription:"withervice with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickupnice service with on time pickup"}
+    ]
+    console.log(arrOfDetails[0].discription);
+    function Happy_Customer_slider(){
+        console.log("sachin");
+ let div=document.createElement("div")
+ let div1=document.createElement("h2")
+ div1.innerText=arrOfDetails[0].name
+ let div2=document.createElement("h4")
+ div2.innerText=arrOfDetails[0].discription
+
+ div.append(div1,div2)
+
+ let div9=document.createElement("div")
+ let div11=document.createElement("h2")
+ div11.innerText=arrOfDetails[1].name
+ let div21=document.createElement("h4")
+ div21.innerText=arrOfDetails[1].discription
+
+ div9.append(div11,div21)
+
+ let div6=document.createElement("div")
+ let div111=document.createElement("h2")
+ div111.innerText=arrOfDetails[2].name
+ let div211=document.createElement("h4")
+ div211.innerText=arrOfDetails[2].discription
+
+ div6.append(div111,div211)
+
+
+ 
+ let div67=document.createElement("div")
+ let div1111=document.createElement("h2")
+ div1111.innerText=arrOfDetails[3].name
+ let div2111=document.createElement("h4")
+ div2111.innerText=arrOfDetails[3].discription
+
+ div67.append(div1111,div2111)
+
+
+ let cont=document.getElementById("Happy_Customer")
+
+ cont.append(div,div9,div6,div67)
+
+
+}
+let hola=0
+Happy_Customer_slider()
+let token=document.querySelectorAll("button")
+token[0].addEventListener("click",()=>{
+if(hola==arrOfDetails.length-4){
+hola=0
+
+}else{
+    hola++
+}
+
+    let div=document.createElement("div")
+ let div1=document.createElement("h2")
+ div1.innerText=arrOfDetails[hola].name
+ let div2=document.createElement("h4")
+ div2.innerText=arrOfDetails[hola].discription
+
+ div.append(div1,div2)
+
+ let div9=document.createElement("div")
+ let div11=document.createElement("h2")
+ div11.innerText=arrOfDetails[hola+1].name
+ let div21=document.createElement("h4")
+ div21.innerText=arrOfDetails[hola+1].discription
+
+ div9.append(div11,div21)
+
+ let div6=document.createElement("div")
+ let div111=document.createElement("h2")
+ div111.innerText=arrOfDetails[hola+2].name
+ let div211=document.createElement("h4")
+ div211.innerText=arrOfDetails[hola+2].discription
+
+ div6.append(div111,div211)
+
+
+ 
+ let div67=document.createElement("div")
+ let div1111=document.createElement("h2")
+ div1111.innerText=arrOfDetails[hola+3].name
+ let div2111=document.createElement("h4")
+ div2111.innerText=arrOfDetails[hola+3].discription
+
+ div67.append(div1111,div2111)
+
+
+ let cont=document.getElementById("Happy_Customer")
+cont.innerHTML=""
+ cont.append(div,div9,div6,div67)
+
+    
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+token[1].addEventListener("click",()=>{
+    if(hola==0){
+hola=arrOfDetails.length-4
+
+}else{
+    hola--
+}
+
+    let div=document.createElement("div")
+ let div1=document.createElement("h2")
+ div1.innerText=arrOfDetails[hola].name
+ let div2=document.createElement("h4")
+ div2.innerText=arrOfDetails[hola].discription
+
+ div.append(div1,div2)
+
+ let div9=document.createElement("div")
+ let div11=document.createElement("h2")
+ div11.innerText=arrOfDetails[hola+1].name
+ let div21=document.createElement("h4")
+ div21.innerText=arrOfDetails[hola+1].discription
+
+ div9.append(div11,div21)
+
+ let div6=document.createElement("div")
+ let div111=document.createElement("h2")
+ div111.innerText=arrOfDetails[hola+2].name
+ let div211=document.createElement("h4")
+ div211.innerText=arrOfDetails[hola+2].discription
+
+ div6.append(div111,div211)
+
+
+ 
+ let div67=document.createElement("div")
+ let div1111=document.createElement("h2")
+ div1111.innerText=arrOfDetails[hola+3].name
+ let div2111=document.createElement("h4")
+ div2111.innerText=arrOfDetails[hola+3].discription
+
+ div67.append(div1111,div2111)
+
+
+ let cont=document.getElementById("Happy_Customer")
+cont.innerHTML=""
+ cont.append(div,div9,div6,div67)
+
+})
+</script>
