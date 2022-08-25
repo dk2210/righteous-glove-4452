@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/df4f524a0b.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Poppins';
+            background-color: whitesmoke;
+            /* position: relative; */
+        }
+        /* navbar */
+        .navbar_sticky {
+            position:sticky;
+            top: 0;
+            background-color: white;
+        }
+        #navbar1{
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            background-color: white;
+        }
+        #navbar1>div+div{
+            display: flex;
+            justify-content: space-evenly;
+            margin-right: 10px;
+            width: 700px;
+            padding-top: 10px;
+        }
+        #navbar1>div{
+            margin-left: 100px    
+        }
+        .border{
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            margin-bottom: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 5px;   
+        }  
+        #sanitised{
+            margin-top: -13px;
+            font-size: 13px;
+            margin-left:22px
+        }
+        .border:hover,.nav_color:hover{
+            color: teal;
+            cursor: pointer;
+        }
+        .nav_color{
+            padding-top: 5px;
+        }
+        #exit_Log{
+            margin-right: -25px;
+            margin-top: 4px;
+        }
+        /* main display */
+        #main_body{
+            display: flex;
+        }
+
+        /* cont_1 */
+        #cont_1{
+            border: 1px solid rgb(243, 243, 243);
+            width: 45%;
+            height: auto;
+            margin:  10px auto auto 20px ;
+        }
+        #image_box{
+            padding: 15px;
+            border-bottom: 2px solid grey;
+        }
+        #image_box > img {
+            width: 100%;
+            height: 100%;
+        }
+        #tags {
+             display: flex;
+             justify-content: space-evenly;
+             padding: 10px;
+        }
+        .tag_box{
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        .tag_box > img {
+            width: 100%;
+            height: 100%;
+        }
+        .tag > p {
+            margin: 0px;
+            height: 15px;
+            font-size: 12px;
+        }
+        .tag > h4 {
+            margin: 2px 0px;
+        }
+        /* cont-2 */
+        #cont_2{
+            width: 40%;
+            margin: -68vh 80px auto auto;
+            height: auto;
+            border-radius: 15px;
+            position:sticky;
+            left: 0px;
+            top: 88px;
+            background-color: white;
+        }
+        #car_name_div {
+            border-radius: 15px 15px 0px  0px;
+            background-color: rgb(223, 223, 223);
+            margin: 0px;
+            padding: 5px;
+        }
+        #car_name_div > h1 {
+            margin:0px 0px 0px 8%;
+        }
+        #tenure_boxes{
+            margin:0px 0px 0px 8%;
+            display: flex;
+            gap: 8%;
+        }
+        .tenure {
+            height: 50px;
+            /* display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; */
+            text-align: center;
+            padding:10px;
+            border-radius: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            /* position: relative; */
+        }
+        .tenure > h4 {
+            margin: 0px;
+            /* border: 1px solid black; */
+            padding: 0px;
+        }
+      
+        .splash_image {
+            width: 15px;
+            height: 15px;
+            /* border: 1px solid black; */
+            margin: -8px;
+        }
+        .splash_image > img {
+            /* border: 1px solid red; */
+            /* margin: 0px 0px -22px -4.8vw; */
+            width: 100%;
+            height: 100%;
+        }
+        #price_bar {
+            display: flex;
+            margin: 5% 0px 0px 8%;
+            width: 60%;
+            height: 30px;
+            padding: 0px;
+            align-items: center;justify-content: center;
+            font-size: 20px;
+        }
+        #price {
+            padding: 0px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #month_tag {
+            font-size:15px;
+        }
+        #f_price {
+            font-size: 20px;
+            margin-left: 10px;
+            text-decoration: line-through;
+            color: rgb(187, 187, 187);
+        }
+        #discount_tag {
+            font-size: 17px;
+            margin-left: 10px;
+            color: rgb(0, 187, 187);
+        }
+        #tax_tag {
+            display: flex;
+            align-items: center;text-align: left;
+            margin: 0px 0px 0px 8%;
+            padding: 0px;
+            width: 18%;
+            height: 18px;
+            font-size: 10px;
+        }
+        #button {
+            display: flex;
+            margin: 3% 0px 0px 8%;
+            /* justify-content: center; */
+            width: 85%;
+        }
+        #proceed_button {
+            word-spacing: 50px;
+            width: 100%;
+            padding: 15px;
+            font-size: 20px;
+            margin: 0px;
+            border: none;
+            background-image: linear-gradient(270deg,#1caba2 20%,#1c7fab);
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #delivery_info {
+            display: flex;
+        }
+        #del_time,#del_place {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            margin: 10px 0px 0px 8%;
+        }
+        #del_time>p,#del_time>h5 {
+            margin: 0px;
+            word-spacing: 2px;
+        }
+        #inline_image {
+            margin-right: 5px;
+        }
+        #del_place>p,#del_place>h5 {
+            margin: 0px;
+        }
+        #alert_tag {
+            height: auto;
+            margin: 10px 0px 0px 8%;
+            width: 70%;
+            font-size: 13px;
+        }
+        #alert_tag>p {
+            margin: 0px;
+            color: #d1a619;
+        }
+        #policy_tag {
+            margin: 10px 0px 0px 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 92%;
+        }
+        #policy_tag> div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px;
+            padding-right: 15px;
+        }
+        #policy_tag>div > h5 {
+            height: 20px;
+            display: flex;
+            align-items: center;
+            margin: 10px 0px;
+        }
+        #policy_tag>div > h5:last-child{
+            color: teal;
+            text-decoration: underline;
+        }
+        .done_image {
+            margin-right: 5px;
+        }
+        .details_tag {
+           margin-left: 5vw;;
+        }
+        #call_button {
+            font-size: 15px;
+            word-spacing: 3px;
+            padding: 10px;
+            background-color: white;
+            width: 100%;
+            color: teal;
+            font-weight: bold;
+            border: 1px solid rgb(216, 216, 216);
+            border-radius: 10px;
+            margin: 0px 0px 20px 0px;
+            cursor: pointer;
+        }
+        #number {
+            color:black
+        }
+        /* cont_3 */
+        #cont_3{
+            border: 1px solid rgb(224, 224, 224);
+            margin: 10px 0px 0px 0px;
+            background-color: rgb(236, 236, 236);
+            border-radius: 10px;
+        }
+        #cont_3 h1 {
+            margin-left: 2vw;
+        }
+        #table {
+            width: 40%;
+            height: auto;
+            border: 1px solid rgb(221, 221, 221);
+            margin: auto auto 5vh 2vw;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .row {
+            height: 10vh;
+            border-bottom:  1px solid grey;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .row > div:first-child,.last_row > div:nth-child(1), .hed_sub > div:nth-child(1) {
+            width: 50%;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hed_sub {
+            border-bottom:  1px solid grey;
+            padding-top: 10px;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .hed_sub > div {
+            height: 100%;
+        }
+        .row > div:nth-child(2),.hed_sub > div:nth-child(2){
+            box-shadow: rgba(99, 99, 99, 0.35) 0px 0px 15px;
+            width:20%;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+        }
+        .row > div:nth-child(3),.last_row > div:nth-child(3), .hed_sub > div:nth-child(3){
+            width:18%;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .last_row{
+            height: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .last_row > div:nth-child(2){
+            box-shadow: rgba(99, 99, 99, 0.35) 0px 0px 15px;
+            width: 20%;
+            height: 5vh;
+            background-color: white;
+        }
+
+        /* cont_4 */
+        #cont_4{
+            width: 40%;
+            height: auto;
+            margin: 5vh auto auto 2vw;
+            padding-left: 10px;
+        }
+        #cont_4 > div > p {
+            /* border: 1px solid black; */
+            font-size: 12px;
+            margin: 0px;
+        }
+        .includes {
+            display: flex;
+            gap: 70px;
+        }
+        .includes > div > p {
+            margin: 0px;
+        }
+        .includes_image_box {
+           margin: 10px auto;
+        }
+        /* cont_5 */
+        #cont_5 {
+            margin: 20px 0px;
+            height: auto;
+            padding: 25px;
+            background-image: linear-gradient(270deg,#1caba2 20%,#1c7fab);
+        }
+        #cont_5 > h5 {
+            font-weight: bold;
+        }
+        #sanitizer_box {
+            width: 40%;
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+        }
+        #sanitizer_box > div > img {
+            margin: 0px 0px 0px 0px ;
+        }
+        iframe {
+            border-radius: 10px;
+            margin: 10px 0px;
+            border: 1px solid black;
+        }
+        /* cont_6 */
+        #cont_6 {
+            height: 80vh;
+            display: flex;
+            gap: 20px;
+            justify-content:space-evenly;
+        }
+        #cont_6 > div:first-child {
+            width: 25%;
+            height: 30%;
+            margin: 10% 0px 0px 0px ;
+        }
+        #cont_6> div:nth-child(2){
+            width: 5%;
+            height: 20%;
+            margin: 10% 0px 0px 0px ;
+            text-align: center;
+        }
+        #cont_6> div:nth-child(2)>p {
+            margin: 0px 0px 5px 0px;
+            cursor: pointer;
+        }
+        #home:hover,#faqs:hover {
+            font-weight: bold;
+        }
+        #cont_6> div:nth-child(3){
+            width: 20%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 10% 0px 0px 0px ;
+        }
+        #logo_box {
+            width: 10vh;
+            height: 8vh;
+        }
+        #small_logos {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #social_tag {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        #small_logos > div {
+            width: 20px;
+            padding: 5px;
+            height: 20px;
+            display: flex;
+            align-items: center;justify-content: center;
+            border-radius: 50%;
+        }
+        #small_logos > div:hover {
+            color: white;
+            background-color: teal;
+        }
+        #small_logos + p {
+            margin-left: 20px;
+        }
+        .social_media_cont {
+        border: 1px solid rgb(226, 226, 226);
+         width: 90%;
+         height: 45px;
+         margin:5px auto 10px 20px;
+         display: flex;
+         align-items: center;
+         padding: 8px;
+         color: grey;
+         cursor: pointer;
+        }
+        #apple {
+            margin-bottom: 2px;
+        }
+        .social_media_cont > img {
+            margin-right: 4px;
+        }
+        .social_media_p {
+            font-weight: bold;
+        }
+        .social_media_cont:hover {
+            color: teal;
+            font-weight: bold;
+        }
+        </style>
+</head>
+<body>
+    <section class="navbar_sticky" name="navbar">
+        <div id="navbar1">
+            <div>
+                <div><img src="https://www.revv.co.in/grapheneImages/newopen/logo.svg" alt="No internet connection"></div>
+                <div id="sanitised">sanitised,safe</div>
+            </div>
+            <div >
+                <div class="border"><b>Hyundai</b> Subscription</div>
+                <div class="border"><b>Mahindra</b> Subscription</div>
+                <div class="nav_color">FAQs</div>
+                <div id="exit_Log"><img src="	https://www.revv.co.in/grapheneImages/newopen/ic-web-profile-login.svg" alt="error"></div>
+                <div class="nav_color">Login or Signup</div>
+            </div>
+        </div>
+    </section>
+
+    <section name="main body">
+            
+            <div id="cont_1">
+                        <div id="image_box">
+                        </div>
+                        <div id="tags">
+                            <div class="tag">
+                                <div class="tag_box">
+                                    <img src="https://www.revv.co.in/grapheneImages/PDP/product-images/condition.svg" alt="">
+                                </div>
+                                <p>condition</p>
+                                <h4>Well maintained</h4>
+                            </div>
+                            <div class="tag">
+                                <div class="tag_box">
+                                    <i class="fa-solid fa-swatchbook"></i>
+                                </div>
+                                <p>varient/Colour</p>
+                                <h4>As per avaibilty</h4>
+                            </div>
+                            <div class="tag">
+                                <div class="tag_box">
+                                    <i class="fa-solid fa-users-gear"></i>
+                                </div>
+                                <p>Transmission type</p>
+                                <h4 id="trans_tag"></h4>
+                            </div>
+                            <div class="tag">
+                                <div class="tag_box">
+                                    <i class="fa-solid fa-gas-pump"></i>
+                                </div>
+                                <p>Fuel type</p>
+                                <h4 id="fuel_tag"></h4>
+                            </div>
+                        </div>
+            </div>
+            
+            <div class="new_cont_2" id="cont_2">
+                <div id="car_name_div">
+                    <h1 id="car_name"></h1>
+                </div>
+                <h3 style="margin-left: 8%;">Subscription tenure</h3>
+                <div id="tenure_boxes">
+                    <div class="tenure">
+                        <div class="splash_image">
+                            <img src="https://www.revv.co.in/grapheneImages/PDP/flash.svg" alt="">
+                        </div>
+                        <h4>1</h4>
+                        <h4>months</h4>
+                    </div>
+                    <div class="tenure">
+                        <div class="splash_image">
+                            <img src="https://www.revv.co.in/grapheneImages/PDP/flash.svg" alt="">
+                        </div>
+                        <h4>2</h4>
+                        <h4>months</h4>
+                    </div>
+                    <div class="tenure">
+                        <div class="splash_image">
+                            <img src="https://www.revv.co.in/grapheneImages/PDP/flash.svg" alt="">
+                        </div>
+                        <h4>3</h4>
+                        <h4>months</h4>
+                    </div>
+                    <div style="background-image: linear-gradient(270deg,#1caba2 20%,#1c7fab); color: white" class="tenure">
+                        <div class="splash_image">
+                            <img src="https://www.revv.co.in/grapheneImages/PDP/flash.svg" alt="">
+                        </div>
+                        <h4>6</h4>
+                        <h4>months</h4>
+                    </div>
+                </div>
+                <div id="price_bar">
+                    <h1 id="price"></h1>
+                    <h2 id="month_tag">month</h2>
+                    <h2  style="font-family: 'Times New Roman', Times, serif;" id="f_price"></h2>
+                    <h2 id="discount_tag">(9% Off)</h2>
+                </div>
+                <div id="tax_tag">
+                    <p>(Inclusive of taxes)</p>
+                </div>
+                <div id="button">
+                    <button id="proceed_button">Proceed <i class="fa-solid fa-angle-right"></i></button>
+                </div>
+                <div id="delivery_info">
+                    <div id="del_time">
+                        <p>Expected date of delivery</p>
+                        <h5><img id="inline_image" src="https://www.revv.co.in/grapheneImages/PDP/flash.svg" alt="">Between 31st Aug - 01st Sep</h5>
+                    </div>
+                    <div id="del_place">
+                        <p>Place of delivery</p>  
+                        <h5>At your doorstep</h5>
+                    </div>
+                </div>
+                <div id="alert_tag">
+                    <p>Due to high demand, delivery timelines may be impacted</p>
+                </div>
+                <div id="policy_tag">
+                    <div>
+                        <h5><img class="done_image" src="https://www.revv.co.in/grapheneImages/PDP/green-tick-icon.svg" alt=""> Extend anytime at normal prices </h5>
+                        <h5>Details</h5>
+                    </div>
+                    <div>
+                        <h5><img  class="done_image"src="https://www.revv.co.in/grapheneImages/PDP/green-tick-icon.svg" alt=""> Return anytime, Just pay fee difference</h5>
+                        <h5>Details</h5>
+                    </div>
+                </div>
+                <div id="button">
+                    <button id="call_button"><i class="fa-solid fa-phone"></i> Dial <span id="number">8860035555</span> to get  to us</button>
+                </div>
+            </div>
+
+            <div id="cont_3">
+                <h1>Car subscription vs buying</h1>
+                <div id="table">
+                    <div   class="hed_sub" class="row">
+                        <div ></div>
+                        <div>Subscribe</div>
+                        <div>Buy</div>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <div>Zero down payment & road tax</div>
+                            <div>
+                                <img src="https://www.revv.co.in/grapheneImages/newopen/mark.svg" alt="">
+                            </div>
+                            <div>
+                                <img src="https://www.revv.co.in/grapheneImages/newopen/cross.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <div>No long term commitment  No loan process, no cibil check</div>
+                            <div>
+                                <img src="https://www.revv.co.in/grapheneImages/newopen/mark.svg" alt="">                           
+                            </div>
+                            <div>
+                                <img src="https://www.revv.co.in/grapheneImages/newopen/cross.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <div>No loan process, no cibil check</div>
+                            <div>
+                                <img src="https://www.revv.co.in/grapheneImages/newopen/mark.svg" alt="">
+                            </div>
+                            <div>
+                                <img src="https://www.revv.co.in/grapheneImages/newopen/cross.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <div>Doorstep pick & drop for maintenance & service</div>
+                            <div>
+                                <img src="https://www.revv.co.in/grapheneImages/newopen/mark.svg" alt="">
+                            </div>
+                            <div>
+                                <img src="https://www.revv.co.in/grapheneImages/newopen/cross.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="last_row">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="cont_4">
+                <h1>Insurance and maintenance includes</h1>
+                <div>
+                    <h3>Comprehensive insurance policy</h3>
+                    <!-- Include-1 -->
+                    <div class="includes">
+                        <div>
+                            <div class="includes_image_box">
+                                <img src="https://www.revv.co.in/grapheneImages/PDP/insurance-and-maintenance/limited-liability.svg" alt="1.1">
+                            </div>
+                                <p>Limited liability</p>
+                                <p>upto 10,000</p>
+                        </div>
+    
+                        <div>
+                            <div class="includes_image_box">
+                                <img src="https://www.revv.co.in/grapheneImages/PDP/insurance-and-maintenance/roadside-assistance.svg" alt="1.2">
+                            </div>
+                                <p>24X7 roadside</p>
+                                <p>assistance</p>
+                        </div>
+    
+                    </div>
+    
+                    <!-- include-2 -->
+                    <h3>Routine service and maintenance</h3>
+                    <div class="includes">
+                        <div>
+                            <div class="includes_image_box">
+                                <img src="https://www.revv.co.in/grapheneImages/PDP/insurance-and-maintenance/oil-top-up-replacement.svg" alt="2.1">
+                            </div>
+                                <p>Oil top-up or</p>
+                                <p>replacement</p>
+                        </div>
+    
+                        <div>
+                            <div class="includes_image_box">
+                                <img src="https://www.revv.co.in/grapheneImages/PDP/insurance-and-maintenance/filter-replacement.svg" alt="2.2">
+                            </div>
+                                <p>Filter</p>
+                                <p>Replacement</p>
+                        </div>
+    
+                        <div>
+                            <div class="includes_image_box">
+                                <img src="https://www.revv.co.in/grapheneImages/PDP/insurance-and-maintenance/tyre-rotation.svg" alt="2.3">
+                            </div>
+                                <p>Tyre</p>
+                                <p>rotation</p>
+                        </div>
+    
+                    </div>
+    
+                    <!-- includes -3_1 -->
+                    <h3>Normal wear and tear</h3>
+                    <p>Cost of excessive wear & tear or consequential damage, caused due to negligent or inappropriate driving is not covered.</p>
+                    <div class="includes">
+                        <div>
+                            <div class="includes_image_box">
+                                <img src="https://www.revv.co.in/grapheneImages/PDP/insurance-and-maintenance/tyre-rotation.svg" alt="3.1.1">
+                            </div>
+                                <p>Tyre</p>
+                                <p>replacement</p>
+                            </div>
+    
+                        <div>
+                            <div class="includes_image_box">
+                                <img src="https://www.revv.co.in/grapheneImages/PDP/insurance-and-maintenance/battery-replacement.svg" alt="3.1.2">
+                            </div>
+                                <p>Battery</p>
+                                <p>replacement</p>
+                        </div>
+    
+                        <div>
+                            <div class="includes_image_box">
+                                <img src="https://www.revv.co.in/grapheneImages/PDP/insurance-and-maintenance/clutch-parts.svg" alt="3.1.3">
+                            </div>
+                                <p>Clutch</p>
+                                <p>parts</p>
+                        </div>
+    
+                    </div>
+    
+                      <!-- includes-3_2 -->
+                      <div class="includes">
+                        <div>
+                            <div class="includes_image_box">
+                                <img src="https://www.revv.co.in/grapheneImages/PDP/insurance-and-maintenance/brake-parts.svg" alt="3.2.1">
+                            </div>
+                                <p>Brake</p>
+                                <p>parts</p>
+                        </div>
+    
+                        <div>
+                            <div class="includes_image_box">
+                                <img src="https://www.revv.co.in/grapheneImages/PDP/insurance-and-maintenance/suspension-parts.svg" alt="3.2.2">
+                            </div>
+                                <p>Suspension</p>
+                                <p>parts</p>
+                        </div>
+    
+                        <div>
+                            <div class="includes_image_box">
+                                <img src="https://www.revv.co.in/grapheneImages/PDP/insurance-and-maintenance/manufacturer-warranty.svg" alt="3.2.3">
+                            </div>
+                                <p>Manufacturer</p>
+                                <p>warranty</p>
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+            <div id="cont_5">
+                <h1>Sanitised and safe cars</h1>
+                <div id="sanitizer_box">
+                    <div>
+                        <img src="https://www.revv.co.in/grapheneImages/PDP/sanitised-safe-cars/external-sanitisation.svg" alt="1">
+                        <p>External</p>
+                        <p>sanitisation</p>
+                    </div>
+                    <div>
+                        <img src="https://www.revv.co.in/grapheneImages/PDP/sanitised-safe-cars/internal-sanitisation.svg" alt="2">
+                        <p>Internal</p>
+                        <p>sanitisation</p>
+                    </div>
+                    <div>
+                        <img src="https://www.revv.co.in/grapheneImages/PDP/sanitised-safe-cars/doorstep-delivery.svg" alt="3">
+                        <p>Contact-less</p>
+                        <p>doorstep delivery</p>
+                    </div>
+                    <div>
+                        <img src="https://www.revv.co.in/grapheneImages/PDP/sanitised-safe-cars/safety-hygiene.svg" alt="4">
+                        <p>Safety & hygiene</p>
+                        <p>best practices</p>
+                    </div>
+                    <div>
+                        <img src="https://www.revv.co.in/grapheneImages/PDP/sanitised-safe-cars/re-sanitization.svg" alt="5">
+                        <p>Re-sanitization</p>
+                        <p>at doorstep</p>
+                    </div>
+                    <div>
+                        <img src="https://www.revv.co.in/grapheneImages/PDP/sanitised-safe-cars/cleaning-washing.svg" alt="6">
+                        <p>Cleaning and</p>
+                        <p>washing</p>
+                    </div>
+                </div>
+    
+                <div id="U_tube_video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8I2A7HQfzwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+    </section>
+    <div id="cont_6">
+        <div>
+            <div>
+                <div id="logo_box"><img src="https://www.revv.co.in/grapheneImages/newopen/logo.svg" alt="No internet connection"></div>
+                <div id="sanitised">sanitised,safe</div>
+            </div>
+            <p>2022 Primemover Mobility Technologies Pvt Ltd.</p>
+            <p>All rights reserved</p>
+        </div>
+
+        <div>
+            <p id="home">Home</p>
+            <p id="faqs">FAQs</p>
+        </div>
+
+        <div>
+            <p id="social_tag">Social</p>
+            <div id="small_logos">
+                <div><i class="fa-brands fa-facebook-f"></i></div>
+                <div><i class="fa-brands fa-twitter"></i></div>
+                <div><i class="fa-brands fa-instagram"></i></div>
+                <div><i class="fa-brands fa-youtube"></i></div>
+                <div><i class="fa-brands fa-linkedin-in"></i></div>
+            </div>
+            <p>Download the Revv App!</p>
+            <div class="social_media_cont">
+                <img id="apple" src="https://www.revv.co.in/grapheneImages/newopen/apple-icon.svg" alt="">
+                <p>Download <span class="social_media_p">App Store</span></p>
+            </div>
+            <div class="social_media_cont">
+                <img src="https://www.revv.co.in/grapheneImages/newopen/play-store.svg" alt="">
+                <p>Download <span class="social_media_p">Google Play</span></p>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
+<script>
+    let data = JSON.parse(localStorage.getItem("vehicle"));
+    let image = document.createElement("img");
+    image.src = data.image;
+    document.getElementById("image_box").append(image);
+    document.getElementById("trans_tag").innerText = data.trans;
+    document.getElementById("fuel_tag").innerText = data.fuel;
+    document.getElementById("car_name").innerText = data.name;
+    document.getElementById("price").innerText = `₹ ${data.price} /`;
+    document.getElementById("f_price").innerText = `₹ ${data.f_price} `;
+</script>

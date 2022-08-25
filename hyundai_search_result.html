@@ -433,6 +433,10 @@
             div3_1.append(price,price_after);
             count++;
             document.getElementById("count").innerText=count;
+            div.addEventListener("click", () => {
+                localStorage.setItem("vehicle",JSON.stringify(ele));
+                window.location.href="./checkout.html";
+            })
         });
     }
 
