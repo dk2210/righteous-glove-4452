@@ -1,0 +1,341 @@
+
+body {
+  font-family: 'Poppins', "sans-serif ";
+  font-size: 14px;
+ 
+}
+#navbar {
+  display: flex;
+  padding: -2%;
+  gap: 15px;
+  /* border: 1px solid red; */
+  align-items: center;
+
+}
+#logo {
+  margin-left: 7%;
+  height: 5%;
+}
+
+#hyundai {
+  display: block;
+  width: 13%;
+  height: 20px;
+  border-left: 1px solid rgb(238, 233, 233);
+  padding: 1%;
+
+
+}
+#navbar>p {
+  margin-bottom: -1%;
+  margin-left: -4%;
+
+}
+
+#work {
+  margin-left: 30%;
+  color: #4c2552;
+}
+
+#login {
+  margin-right: 2%;
+  margin-left: 2%;
+  color: #4c2552;
+}
+
+
+
+#backgroundcar {
+  display: flex;
+  /* border: 1px solid red; */
+  height: 90%;
+  gap: 4%;
+  background-image: url("./icons/hyundai.jpg");
+}
+
+
+#inputbox {
+  /* border: 1px solid red; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 70%;
+  width: 40%;
+  margin-top: 3%;
+  margin-left: 3%;
+  padding: 3%;
+  border-radius: 5px;
+  background-color: white;
+}
+
+
+#inputbox img {
+  margin-left: 20%;
+  width: 55%;
+
+}
+
+
+#inputbox >p,
+h4 {
+  text-align: center;
+
+}
+
+
+#selectcity {
+  height: 15%;
+  width: 90%;
+  border: none;
+  border-bottom: 2px solid gray;
+  outline: none;
+}
+
+#bytheyear {
+  margin-bottom: -5.8%;
+
+}
+
+
+#looking {
+  margin-bottom: -4%;
+  font-size: 20px;
+  line-break: 1px;
+}
+
+
+#explore>b {
+  margin-left: 34%;
+  color: rgb(28, 171, 162);
+  font-size: 17px;
+
+}
+
+
+#explore {
+  /* border: 1px solid black; */
+  height: 18%;
+  width: 38%;
+  padding: 1%;
+  margin-top: 29%;
+  
+  border-radius: 5px;
+  color: white;
+
+}
+#nameofcity{
+  margin: auto;
+  text-align: center;
+}
+input {
+  font-size:20px;
+  font-weight: bolder;
+}
+select{
+  font-size:20px;
+  font-weight: bolder;
+}
+#newcar,#unboxcar{
+  width:45%;
+  height:10%;
+  /* border:1px solid red; */
+  float: left;
+  color: white;
+  margin-top: 7%;
+  padding:2%;
+  text-align: center;
+  border-radius:5px;
+}
+#newcar{
+  background-color: rgba(33, 163, 155, 0.8);
+}
+#unboxcar{
+  margin-left: 55%;
+  margin-top: -11%;
+  background: -moz-linear-gradient(45deg, rgb(0, 247, 255) 0%, hsla(186, 100%, 69%, 1) 100%);
+  background: -webkit-linear-gradient(45deg, rgb(15, 155, 155) 0%, hsla(186, 100%, 69%, 1) 100%);
+  background: hsla(217, 100%, 50%, 1);
+   background: linear-gradient(45deg, rgb(11, 115, 122) 0%, hsla(186, 100%, 69%, 1) 100%);
+
+
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+}
+
+#newcar>h3,#unboxcar>h3{
+  margin-top:-1%;
+}
+#newcar>p,#unboxcar>p{
+  margin-top:-5%;
+}
+#price1,#price2{
+  width:45%;
+  height:7%;
+  /* border:1px solid red; */
+  float: left;
+  gap:20px;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  padding:2%;
+  /* text-align: center; */
+}
+#price2{
+  margin-left:55%;
+  margin-top: -9%;
+}
+#price1>h2,#price2>h2{
+  margin-top: -17%;
+  margin-left: 35%;
+
+}
+#month1,#month2{
+  margin-left: 68%;
+  margin-top: -17%;
+}
+
+/* <!-- -------------------------------------------------Subscription Benefits div------------------------------------- --> */
+#benefits{
+  height:30%;
+  width: 85%;
+  margin: auto;
+  border:1px solid red;
+}
+
+/* ----------------------------------------Less than & greater than button------------------------------------- */
+button {
+  border: none;
+
+}
+
+#buttonborder {
+  width: 5%;
+  height: 4%;
+  /* border:1px solid red; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1% 0% 1% 1%;
+  margin-left: 80%;
+  margin-bottom: 2%;
+}
+#button2 {
+
+
+  margin: auto;
+  margin-top: -80%;
+
+}
+#button1 {
+  margin: auto;
+  margin-top: -80%;
+}
+/* ----------------------------------sliding boxes in subscription Benifites-------------------------------------- */
+/* #imagesofbenifits1,#imagesofbenifits2,#imagesofbenifits3,#imagesofbenifits4
+{
+  
+  width:30%;
+  height:45%;
+  margin-top: -5%;
+  border:1px solid green;
+  float: left;
+  flex-direction: row;
+  overflow-wrap: ;
+  
+} */
+
+
+
+
+/* <!-- -------------------------------------------------Hyundai Subscription div----------------------------------------- --> */
+
+#hyundaibox{
+  display: flex;
+  justify-content: space-evenly;
+  width:85%;
+  height:50%;
+  /* border:1px solid red; */
+  margin: auto;
+  padding:1%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 10%;
+}
+#hyundaibox>div:first-child>h2{
+  margin-left: 3%;
+}
+#hyundaibox>div:first-child>p{
+  margin-left: 3%;
+  font-size: 18px;
+  color: #a5a5a5;
+  margin-bottom: 8%;
+}
+
+
+#youtube{
+  display: block;
+  margin-top: 2%;
+ 
+}
+iframe{
+  border-radius: 5px;
+}
+#first{
+  width:43%;
+  /* border: 1px solid red; */
+}
+#first>div>b{
+  color: rgb(28,171,162);
+  /* border:1px solid purple; */
+  padding: 2%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 5%;
+ 
+
+}
+
+/* <!-- ---------------------------------------------------How it works  section------------------------------------------------ --> */
+
+
+#workssection>div{
+  display: flex;
+  gap:5%;
+}
+table, th, td {
+  /* border:1px solid black; */
+  border-collapse: collapse;
+  font-family: 'Poppins', "sans-serif ";
+}
+ 
+td:nth-child(2)>img{
+  width: 13%;
+  /* background-color: red; */
+} 
+
+td:last-child>img
+{
+  width: 13%;
+  /* background-color: red; */
+}
+td:nth-child(2){
+  width: 40%;
+}
+
+td:last-child>p
+{
+margin-top: -5%;
+
+
+
+}
+
+td:nth-child(2)>p
+{
+  
+  margin-top: -3%;
+}
+td:nth-child(2)>p
+{
+  
+  margin-top: -3%;
+}
+
+table{
+  height: 50%;
+  width: 80%;
+  margin: auto;
+}
