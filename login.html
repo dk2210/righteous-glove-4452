@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body>div{
+            width: 30%;
+            height: 40%;
+            border: 1px solid red;
+            margin: auto;
+            margin-top: 100px;
+        }
+        body>div>p>img{
+            width: 20px;
+            height: 20px;
+            float: right;;
+        }
+        h2{
+            text-align: center;
+            font-size: large;
+            color: #676767;
+        }
+    
+        img{
+            width: 40%;
+            height: 25%;
+            display: block;
+            margin: auto;
+            margin-bottom: 6px;
+        }
+        #SignUpPage{
+            text-align: center;
+            margin-bottom: 20px;
+
+        }
+        #Email{
+            margin-top: 8px;
+            border: none;
+            padding: 7px 10px ;
+            outline: 0px;
+        }
+        #Password{
+            margin-top: 8px;
+            border: none;
+            outline: 0px;
+        }
+        #sub{
+            margin-top: 15px;
+            color: white;
+            background-color: #0ebaba;
+            border-radius: 10px;
+            padding: 7px 20px;
+            font-size: 18px;
+            border: none;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p><img src="https://www.revv.co.in/imgs/cross.png" alt="x"></p>
+        <h2>SIGN UP</h2>
+
+        <img src="https://www.revv.co.in/imgs/google-login.png" alt="google">
+        <img src="https://www.revv.co.in/imgs/facebook-icon.png" alt="facebook">
+        
+        <form id="SignUpPage">
+
+            <!-- <label>Email</label>
+            <br> -->
+
+            <input type="email" id="Email" placeholder="Email ID">
+            <br>
+
+            <!-- <label>Passsword</label>
+            <br> -->
+
+            <input type="password" id="Password" placeholder="Password">
+            <br>
+
+            <input type="submit" value="Proceed" id="sub">
+
+        </form>
+    </div>
+</body>
+</html>
+<script> 
+let form=document.querySelector("#SignUpPage")  
+    form.addEventListener("submit", myFun)
+    let dataUser=JSON.parse(localStorage.getItem("userData"))||[];
+   
+    function myFun(event) {
+
+        
+        event.preventDefault();
+        console.log("hiii");
+        let email = document.querySelector("#Email").value;
+        let pass = document.querySelector("#Password").value;
+        let data={
+            Email:email,
+            
+            Password:pass
+        };
+       
+            if(chackSingin(data.Email)===true){
+
+                alert("Yor are already register...!");
+
+            }else{
+
+                alert("Sign In Succesfull ");
+                dataUser.push(data);
+                localStorage.setItem("userData",JSON.stringify(dataUser));
+                window.location = "login.html";
+
+            }
+
+
+
+
+    }
+    function chackSingin(email){
+
+      let filterd=dataUser.filter(function(elem){
+
+        if(elem.Email===email){
+            
+            return elem;
+        }
+
+      });
+     
+      
+      if(filterd.length>0){
+
+          return true;
+
+      }else {
+
+           return false;
+
+        }
+    } 
+</script>
