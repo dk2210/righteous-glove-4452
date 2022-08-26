@@ -11,7 +11,6 @@
         body {
             font-family: 'Poppins';
             background-color: whitesmoke;
-            /* position: relative; */
         }
         /* navbar */
         .navbar_sticky {
@@ -131,26 +130,20 @@
         }
         .tenure {
             height: 50px;
-            /* display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center; */
             text-align: center;
             padding:10px;
+            cursor: pointer;
             border-radius: 10px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-            /* position: relative; */
         }
         .tenure > h4 {
             margin: 0px;
-            /* border: 1px solid black; */
             padding: 0px;
         }
       
         .splash_image {
             width: 15px;
             height: 15px;
-            /* border: 1px solid black; */
             margin: -8px;
         }
         .splash_image > img {
@@ -556,28 +549,28 @@
                 </div>
                 <h3 style="margin-left: 8%;">Subscription tenure</h3>
                 <div id="tenure_boxes">
-                    <div class="tenure">
+                    <div id="div_3" class="tenure" onclick="callmeten(3,1)">
                         <div class="splash_image">
                             <img src="https://www.revv.co.in/grapheneImages/PDP/flash.svg" alt="">
                         </div>
                         <h4>1</h4>
                         <h4>months</h4>
                     </div>
-                    <div class="tenure">
+                    <div id="div_2" class="tenure"  onclick="callmeten(2,2)">
                         <div class="splash_image">
                             <img src="https://www.revv.co.in/grapheneImages/PDP/flash.svg" alt="">
                         </div>
                         <h4>2</h4>
                         <h4>months</h4>
                     </div>
-                    <div class="tenure">
+                    <div  id="div_1" class="tenure"  onclick="callmeten(1,3)">
                         <div class="splash_image">
                             <img src="https://www.revv.co.in/grapheneImages/PDP/flash.svg" alt="">
                         </div>
                         <h4>3</h4>
                         <h4>months</h4>
                     </div>
-                    <div style="background-image: linear-gradient(270deg,#1caba2 20%,#1c7fab); color: white" class="tenure">
+                    <div id="div_0" style="background-image: linear-gradient(270deg,#1caba2 20%,#1c7fab); color: white" class="tenure"  onclick="callmeten(0,6)">
                         <div class="splash_image">
                             <img src="https://www.revv.co.in/grapheneImages/PDP/flash.svg" alt="">
                         </div>
@@ -595,7 +588,7 @@
                     <p>(Inclusive of taxes)</p>
                 </div>
                 <div id="button">
-                    <button id="proceed_button">Proceed <i class="fa-solid fa-angle-right"></i></button>
+                    <button onclick="callme()" id="proceed_button">Proceed <i class="fa-solid fa-angle-right"></i></button>
                 </div>
                 <div id="delivery_info">
                     <div id="del_time">
@@ -890,4 +883,29 @@
     document.getElementById("car_name").innerText = data.name;
     document.getElementById("price").innerText = `₹ ${data.price} /`;
     document.getElementById("f_price").innerText = `₹ ${data.f_price} `;
+
+    function callme() {
+        event.preventDefault();
+        window.location.href="./paymentpage.html";
+    }
+
+    function callmeten(tenure,month){
+        document.getElementById("div_0").style.backgroundImage="none";
+        document.getElementById("div_0").style.color="black";
+        for(let i=0;i<=3;i++){
+            if(i==tenure){
+                document.getElementById(`div_${tenure}`).style.backgroundImage = "linear-gradient(270deg,#1caba2 20%,#1c7fab)"
+            }else {
+                document.getElementById(`div_${i}`).style.backgroundImage="none";
+                document.getElementById(`div_${i}`).style.color = "black"
+            }
+        }
+        event.preventDefault();
+        console.log(typeof(tenure),tenure);
+        let newPrice = data.price + (300*tenure);
+        console.log(newPrice);
+        document.querySelector(`#price`).innerText = `₹ ${newPrice} /`
+        let obj = {newPrice,month};
+        localStorage.setItem("checkout_price",JSON.stringify(obj));
+    }
 </script>
