@@ -382,5 +382,5 @@ function unboxed1() {
 }
 
 function redirect(){
-    window.location.href="mahindra11.html"
+    window.location.href="mahindra1.html"
 }
