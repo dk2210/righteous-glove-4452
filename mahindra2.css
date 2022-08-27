@@ -1,0 +1,688 @@
+
+body {
+  font-family: 'Poppins', "sans-serif ";
+  font-size: 14px;
+ 
+}
+#navbar {
+  display: flex;
+  padding: -2%;
+  gap: 15px;
+  /* border: 1px solid red; */
+  align-items: center;
+
+}
+#logo {
+  margin-left: 7%;
+  height: 5%;
+}
+
+#hyundai {
+  display: block;
+  width: 13%;
+  height: 20px;
+  border-left: 1px solid rgb(238, 233, 233);
+  padding: 1%;
+
+
+}
+#navbar>p {
+  margin-bottom: -1%;
+  margin-left: -4%;
+
+}
+
+#work {
+  margin-left: 30%;
+  color: #4c2552;
+}
+
+#login {
+  margin-right: 2%;
+  margin-left: 2%;
+  color: #4c2552;
+}
+
+
+
+#backgroundcar {
+  display: flex;
+  /* border: 1px solid red; */
+  height: 90%;
+  gap: 4%;
+  background-image: url("./icons/hyundai.jpg");
+}
+
+
+#inputbox {
+  /* border: 1px solid red; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 70%;
+  width: 40%;
+  margin-top: 3%;
+  margin-left: 3%;
+  padding: 3%;
+  border-radius: 5px;
+  background-color: white;
+}
+
+
+#inputbox img {
+  margin-left: 20%;
+  width: 55%;
+
+}
+
+
+#inputbox >p,
+h4 {
+  text-align: center;
+
+}
+
+
+#selectcity {
+  height: 15%;
+  width: 90%;
+  border: none;
+  border-bottom: 2px solid gray;
+  outline: none;
+}
+
+#bytheyear {
+  margin-bottom: -5.8%;
+
+}
+
+
+#looking {
+  margin-bottom: -4%;
+  font-size: 20px;
+  line-break: 1px;
+}
+
+
+#explore>b {
+  margin-left: 34%;
+  color: rgb(28, 171, 162);
+  font-size: 17px;
+
+}
+
+
+#explore {
+  /* border: 1px solid black; */
+  height: 18%;
+  width: 38%;
+  padding: 1%;
+  margin-top: 29%;
+  
+  border-radius: 5px;
+  color: white;
+
+}
+#nameofcity{
+  margin: auto;
+  text-align: center;
+}
+input {
+  font-size:20px;
+  font-weight: bolder;
+}
+select{
+  font-size:20px;
+  font-weight: bolder;
+}
+#newcar,#unboxcar{
+  width:45%;
+  height:10%;
+  /* border:1px solid red; */
+  float: left;
+  color: white;
+  margin-top: 7%;
+  padding:2%;
+  text-align: center;
+  border-radius:5px;
+}
+#newcar{
+  background-color: rgba(33, 163, 155, 0.8);
+}
+#unboxcar{
+  margin-left: 55%;
+  margin-top: -11%;
+  background: -moz-linear-gradient(45deg, rgb(0, 247, 255) 0%, hsla(186, 100%, 69%, 1) 100%);
+  background: -webkit-linear-gradient(45deg, rgb(15, 155, 155) 0%, hsla(186, 100%, 69%, 1) 100%);
+  background: hsla(217, 100%, 50%, 1);
+   background: linear-gradient(45deg, rgb(11, 115, 122) 0%, hsla(186, 100%, 69%, 1) 100%);
+
+
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+}
+
+#newcar>h3,#unboxcar>h3{
+  margin-top:-1%;
+}
+#newcar>p,#unboxcar>p{
+  margin-top:-5%;
+}
+#price1,#price2{
+  width:45%;
+  height:7%;
+  /* border:1px solid red; */
+  float: left;
+  gap:20px;
+  
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  padding:2%;
+  
+}
+#price2{
+  margin-left:55%;
+  margin-top: -9%;
+}
+#price1>h2,#price2>h2{
+  margin-top: -17%;
+  margin-left: 35%;
+
+}
+#month1,#month2{
+  margin-left: 68%;
+  margin-top: -17%;
+}
+
+/* ----------------------------------------Less than & greater than button------------------------------------- */
+button {
+  border: none;
+
+}
+
+#buttonborder {
+  width: 5%;
+  height: 4%;
+  /* border:1px solid red; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1% 0% 1% 1%;
+  margin-left: 80%;
+  margin-bottom: 2%;
+}
+#button2 {
+
+
+  margin: auto;
+  margin-top: -80%;
+
+}
+#button1 {
+  margin: auto;
+  margin-top: -80%;
+}
+
+
+
+
+
+/* <!-- -------------------------------------------------Hyundai Subscription div----------------------------------------- --> */
+
+#hyundaibox{
+  display: flex;
+  justify-content: space-evenly;
+  width:85%;
+  height:50%;
+  /* border:1px solid red; */
+  margin: auto;
+  padding:1%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 10%;
+}
+#hyundaibox>div:first-child>h2{
+  margin-left: 3%;
+}
+#hyundaibox>div:first-child>p{
+  margin-left: 3%;
+  font-size: 18px;
+  color: #a5a5a5;
+  margin-bottom: 8%;
+}
+
+
+#youtube{
+  display: block;
+  margin-top: 2%;
+ 
+}
+iframe{
+  border-radius: 5px;
+}
+#first{
+  width:43%;
+  /* border: 1px solid red; */
+}
+#first>div>b{
+  color: rgb(28,171,162);
+  /* border:1px solid purple; */
+  padding: 2%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 5%;
+ 
+
+}
+
+/* <!-- ---------------------------------------------------How it works  section------------------------------------------------ --> */
+#workssection {
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+#workssection>div{
+  display: flex;
+  gap:5%;
+}
+table, th, td {
+  /* border:1px solid black; */
+  border-collapse: collapse;
+  font-family: 'Poppins', "sans-serif ";
+}
+ 
+td:nth-child(2)>img{
+  width: 13%;
+  /* background-color: red; */
+} 
+
+td:last-child>img
+{
+  width: 13%;
+  /* background-color: red; */
+}
+td:nth-child(2){
+  width: 40%;
+}
+
+td:last-child>p
+{
+margin-top: -5%;
+
+
+
+}
+
+td:nth-child(2)>p
+{
+  
+  margin-top: -3%;
+}
+td:nth-child(2)>p
+{
+  
+  margin-top: -3%;
+}
+
+table{
+  height: 50%;
+  width: 80%;
+  margin: auto;
+}
+
+/* ----------------------------mod-------------------------------------- */
+#faq>div>h3,
+#faq>div>p {
+
+  margin-left: 30px;
+  margin-top: -17px;
+}
+
+#faq div {
+  margin-top: 20px;
+}
+
+#faq {
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+#subvsbuy>h1:first-child {
+  color: #a5a5a5;
+  margin-bottom: -4.5%;
+  margin-left: 3%;
+  margin-top: 5%;
+}
+
+#subvsbuy>h1:last-child {
+  margin-left: 14%;
+}
+
+.borderoftable {
+  border: 1px solid gray;
+  border-left: none;
+  border-right: none;
+
+}
+
+.markright {
+  display: block;
+  height: -300%;
+  width: -300%;
+  padding: 5%;
+}
+
+.rowFirst {
+  border-bottom: 1px solid gray;
+}
+
+.markwrong {
+
+  height: 10%;
+  width: 10%;
+
+}
+
+
+
+
+.boxofFeaturedOn {
+  width: 80%;
+  height: 70%;
+  /* border: 1px solid red; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-left: 16%;
+  margin-top: 20%;
+}
+
+.boxofFeaturedOn>img:first-child {
+  width: 99.8%;
+  /* border: 2px solid green; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.boxofFeaturedOn>img:nth-child(2) {
+  margin-left: 5%;
+
+}
+
+.boxofFeaturedOn>p {
+  text-align: center;
+}
+
+#boxofFeaturedOnflex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1%
+}
+
+#contactsection {
+  display: flex;
+  justify-content: space-between;
+
+  border: 1px solid red;
+  width: 80%;
+  margin: auto;
+  padding: 1%;
+  margin-top: 10%;
+
+
+  background-color: rgb(60, 61, 74);
+
+}
+
+#contactsection>div>p {
+  margin-top: -6%;
+  color: rgb(177, 177, 183);
+}
+
+#contactsection>div:last-child>h1,
+#contactsection>div:last-child>p {
+  margin-left: -120%;
+
+}
+
+#contactsection>div:first-child>h1,
+#contactsection>div:first-child>p {
+  margin-left: 19%;
+
+  width: 100%;
+}
+
+#contactsection>div:first-child>h1,
+#contactsection>div:last-child>h1 {
+  color: white;
+}
+
+#footer {
+
+  display: flex;
+  gap: 5%;
+  /* border: 1px solid red; */
+  font-size: 16px;
+  padding: 4%;
+  background-color: pink;
+  background-color: rgb(42, 43, 54);
+  margin-top: -2;
+
+}
+
+#footer ul>li {
+
+  width: 120%;
+  padding: 2%;
+  color: rgb(146, 147, 152);
+}
+
+#footer ul>li:hover {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+#footer h3 {
+  color: rgb(255, 255, 255);
+  /* margin-left: -30%; */
+}
+
+#footerbottom {
+  display: flex;
+  gap: 24%;
+  padding: 8%;
+  background-color: rgb(244, 244, 244);
+}
+
+#sanitised {
+
+  margin-left: 23%;
+  margin-top: -12%;
+  font-size: 11px;
+
+  width: 120%;
+}
+
+#copyright {
+  width: 250%;
+  /* border: 1px solid green; */
+}
+
+#fourthone {
+  width: 150%;
+}
+
+#icons>img {
+
+
+  width: 8%;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+  padding: 2%;
+  margin-left: 2%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#icons>img:hover {
+  background-color: rgb(28, 171, 162);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+
+#appstore,
+#googlestore {
+  width: 80%;
+  height: 15%;
+  /* border:1px solid red; */
+  margin-top: 8%;
+  margin: auto;
+  padding: 1%;
+  margin-left: -1%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+}
+
+#appstore>img,
+#googlestore>img {
+  width: 15%;
+}
+
+.download {
+  color: gray;
+  margin-top: -10%;
+  margin-left: 20%;
+}
+
+.store {
+  margin-left: 52%;
+  margin-top: -15%;
+}
+
+#appstore {
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+#homefooter {
+  margin-left: 10%;
+  /* border:1px solid red; */
+  padding: 4%;
+  margin-top: -4%;
+}
+
+#bottomleft {
+  margin-left: -15%;
+}
+
+
+/* <!-- -------------------------------------------------Subscription Benefits------------------------------------- --> */
+
+#benifits {
+  width: 80%;
+  height: 40%;
+  /* border: 1px solid brown; */
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: -2%;
+  background-color: white;
+}
+
+#lessgrest {
+  display: flex;
+  gap: 50%
+}
+
+#xyz {
+  margin-top: 3%;
+}
+
+.item>img {
+
+  height: 120px;
+  width: 80%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-left: 8%;
+}
+
+#box {
+  display: flex;
+}
+
+#carObject {
+  display: flex;
+  gap: 5%;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+#cars {
+  display: flex;
+  gap: 4%;
+  width: 80%;
+  height: 45%;
+  /* border: 1px solid red; */
+  margin: auto;
+  margin-top: 3%;
+}
+
+#cars>div {
+
+  height: 100%;
+  width: 30%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* border: 1px solid red; */
+
+}
+
+#cars>div:last-child {
+  width: 10%;
+  color: rgb(28, 171, 162);
+  font-size: 16px;
+
+}
+
+#cars>div:last-child>img {
+  width: 40%;
+  margin-top: 80%;
+  margin-left: 30%;
+
+}
+
+#cars>div:last-child>b {
+  display: block;
+  margin: auto;
+  margin-left: 20%;
+
+}
+
+#cars>div>p {
+  margin-top: -5%;
+  font-size: 18px;
+  margin-left: 10%;
+  color: gray;
+}
+
+#cars>div>h3 {
+  /* margin-left: 10%; */
+  color: rgb(28, 171, 162);
+  border-left: 4px solid rgb(76, 78, 94);
+  padding-left: 10%;
+
+}
+
+#rupees {
+
+  margin-left: 10%;
+}
+
+#cars>div>h1 {
+  margin-top: -12%;
+  margin-left: 18%;
+
+}
+
+#cars>div>p~p {
+  margin-top: -19%;
+  margin-left: 55%;
+}
+
+#tarajan {
+  margin-top: -2%;
+  margin-left: 6%;
+  width:80%
+}
+
+#horizontal {
+  margin-left: 10%;
+}
