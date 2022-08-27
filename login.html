@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
+</head>
+<style> 
         body{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         body>div{
-            width: 30%;
+            width: 20%;
             height: 40%;
-            border: 1px solid red;
+            padding: 0.7%;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
             margin: auto;
             margin-top: 100px;
         }
@@ -30,11 +32,11 @@
         }
     
         img{
-            width: 40%;
-            height: 25%;
+            width: 50%;
+            height: 28%;
             display: block;
             margin: auto;
-            margin-bottom: 6px;
+            margin-bottom: 10px;
         }
         #SignUpPage{
             text-align: center;
@@ -44,109 +46,119 @@
         #Email{
             margin-top: 8px;
             border: none;
-            padding: 7px 10px ;
+            padding: 4px 10px ;
             outline: 0px;
+            font-size: 18px;
+            font-weight: lighter;
+            margin-bottom: 16px;
         }
         #Password{
             margin-top: 8px;
             border: none;
             outline: 0px;
+            font-size: 18px;
+            font-weight: lighter;
         }
+
         #sub{
-            margin-top: 15px;
+            margin-top: 8px;
             color: white;
             background-color: #0ebaba;
-            border-radius: 10px;
-            padding: 7px 20px;
-            font-size: 18px;
+            border-radius: 2px;
+            padding: 7px 30px;
+            font-size: 17px;
             border: none;
-
         }
-    </style>
-</head>
+        h3{
+            color: #0ebaba;
+            margin-top:8px ;
+            font-size: 15px;
+        }
+        span{
+            color: #0ebaba;
+            margin-left: 8px;
+        }
+        a{
+            text-decoration: none;
+            color: #0ebaba;
+        }
+        #text{
+            font-weight: lighter;
+            font-size: 16px;
+        }
+        #google{
+            margin-top: 20px;
+        }
+    
+</style>
 <body>
+    
     <div>
         <p><img src="https://www.revv.co.in/imgs/cross.png" alt="x"></p>
-        <h2>SIGN UP</h2>
-
-        <img src="https://www.revv.co.in/imgs/google-login.png" alt="google">
-        <img src="https://www.revv.co.in/imgs/facebook-icon.png" alt="facebook">
+        <h2>LOGIN</h2>
         
-        <form id="SignUpPage">
+        <div>
+            <form id="SignUpPage">
 
-            <!-- <label>Email</label>
-            <br> -->
+                <input type="email" id="Email" placeholder="Enter Email">
+                <br>
 
-            <input type="email" id="Email" placeholder="Email ID">
-            <br>
+                <input type="password" id="Password" placeholder="Enter Password">
+                <br>
+                <h3>Send a new password to my email ID</h3>
+                <br>
 
-            <!-- <label>Passsword</label>
-            <br> -->
+                <input type="submit" value="Login" id="sub">
 
-            <input type="password" id="Password" placeholder="Password">
-            <br>
+            </form> 
+            <h2 id="text"> Don't have a account yet?<span><a href="signup.html">Sign Up</a></span></h2>
 
-            <input type="submit" value="Proceed" id="sub">
-
-        </form>
-    </div>
+            <img src="https://www.revv.co.in/imgs/google-login.png" alt="google" id="google">
+            <img src="https://www.revv.co.in/imgs/facebook-icon.png" alt="facebook">
 </body>
 </html>
-<script> 
-let form=document.querySelector("#SignUpPage")  
+<script>
+let form=document.querySelector("#SignUpPage")      
     form.addEventListener("submit", myFun)
-    let dataUser=JSON.parse(localStorage.getItem("userData"))||[];
-   
+    let dataUser = JSON.parse(localStorage.getItem("userData")) || [];
+
     function myFun(event) {
 
-        
         event.preventDefault();
-        console.log("hiii");
         let email = document.querySelector("#Email").value;
         let pass = document.querySelector("#Password").value;
-        let data={
-            Email:email,
+        
+
+        if (chackEmails(email,pass) === true) {
             
-            Password:pass
-        };
-       
-            if(chackSingin(data.Email)===true){
+            alert("Login Sucessfull....!")
+            window.location.href = "index.html"
 
-                alert("Yor are already register...!");
+        } else {
 
-            }else{
+            alert("Please check your credentials...!")
 
-                alert("Sign In Succesfull ");
-                dataUser.push(data);
-                localStorage.setItem("userData",JSON.stringify(dataUser));
-                window.location = "login.html";
-
-            }
-
-
+        }
 
 
     }
-    function chackSingin(email){
+    function chackEmails(email,pass) {
 
-      let filterd=dataUser.filter(function(elem){
+       let flag = 0;
 
-        if(elem.Email===email){
-            
-            return elem;
-        }
+        dataUser.forEach(function(el){
 
-      });
-     
-      
-      if(filterd.length>0){
+            if(el.Email==email&&el.Password==pass){
+                flag=1;
+            }
 
-          return true;
+        })
 
-      }else {
+        if(flag==1){
 
-           return false;
+            return true;
 
-        }
-    } 
-</script>
+        }else
+        return false;
+
+    }</script>
