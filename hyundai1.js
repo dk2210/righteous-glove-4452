@@ -193,3 +193,8 @@ function left() {
       i--;
    }
 }
+
+
+function redirect(){
+   window.location.href="hyundai2.html"
+}

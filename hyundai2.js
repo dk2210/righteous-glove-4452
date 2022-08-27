@@ -3,7 +3,7 @@ let citychange = () => {
 
     let y = document.getElementById("nameofcity");
     y.innerText = `New Hyundai Car Subscription in ${x}`;
-
+    document.getElementById("title").innerText=`New Hyundai Car Subscription in ${x}`;
     if (x == "Bangalore") {
         document.getElementById("amount1").innerText = "16,720";
         document.getElementById("amount2").innerText = "15,799";
@@ -380,4 +380,8 @@ function unboxed1() {
     document.getElementById("firstcar").innerText = "15,799/"
     document.getElementById("secoundcar").innerText = "18,899/"
     document.getElementById("thirdcar").innerText = "24,899/"
+}
+
+function redirect(){
+    window.location.href="hyundai1.html"
 }
