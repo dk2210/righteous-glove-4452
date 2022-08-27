@@ -15,7 +15,7 @@
         }
       #rental{
             /* border: 2px solid; */
-            width: 40%;
+            width: 43%;
             height:450px;
             margin-left: 7%;
             text-align: center;
@@ -123,7 +123,7 @@
             color: rgb(131,131,138);
             background-color: rgb(42,43,54);
             padding: 2% 4%;
-            height: 300px;
+            height: 350px;
         }
         #service>p{
             font-size: 25px;
@@ -134,11 +134,11 @@
         #service>div{
             display: flex;
             gap: 20%;
-            line-height: 20px;
+            line-height: 30px;
             font-size: 14px;
         }
         #service>div>div:nth-child(1){
-            line-height: 25px;
+            line-height: 35px;
             
         }
         #service>div>div p:hover{
@@ -160,16 +160,16 @@
         </div>
       </div>
       <div>
-        <div class="border"><b>Hyundai</b> Subscription</div>
-        <div class="border"><b>Mahindra</b> Subscription</div>
-        <div class="nav_color">FAQs</div>
+        <div  class="border"> <a style="text-decoration: none; color: black;" href="hyundai1.html"><b> Hyundai</b> Subscription</a></div>
+        <div class="border"> <a style="text-decoration: none; color: black;" href="hyundai2.html"><b>Mahindra</b> Subscription</a>   </div>
+        <div class="nav_color"><a style="text-decoration: none; color: black;" href="faq.html">FAQs</a> </div>
         <div id="exit_Log">
           <img
             src="	https://www.revv.co.in/grapheneImages/newopen/ic-web-profile-login.svg"
             alt="error"
           />
         </div>
-        <div class="nav_color">Login or Signup</div>
+        <div class="nav_color"><a style="text-decoration: none; color: black;" href="signup.html"> Login or Signup</a></div>
       </div>
     </div>
     <!-- navbar here -->
@@ -180,12 +180,12 @@
               <div id="rental">
                 <div>
                     <div id="gor">
-                        <h1 style="margin-top: 6%;">Rentals</h1>
-                        <p style="width: 200px;font-size: 16px;">For hours & days</p>
+                        <h1 style="margin-top: 6%;" class="touchit"> Rentals</h1>
+                        <p style="width: 200px;font-size: 16px;" class="touchit">For hours & days</p>
                     </div>
                     <div id="gos">
-                        <h1  style="margin-top: 6%;">Subscriptions</h1>
-                        <p style="width: 200px; font-size: 16px;">For months & years</p>
+                        <h1  style="margin-top: 6%;" class="loveit">Subscriptions</h1>
+                        <p style="width: 200px; font-size: 16px;" class="loveit">For months & years</p>
                     </div>
                 </div>
                 <img src="https://www.revv.co.in/imgs/logo-rentals.svg" alt="">
@@ -200,7 +200,7 @@
                 </select><br>
                <input  type="calendar" id="start" placeholder="Start time">
                   <input type="calendar" id="end" placeholder="End time">
-                <button id="search">Search</button>   
+                <button  id="search">Search</button>   
                 
             </div>
               <div id="imagesOfHome">
@@ -269,13 +269,13 @@
         <h1 style="color: grey; margin-top: 30px;">Happy Customers</h1>
      <div><button class="button11"><</button> <button class="button11">></button></div> 
     </div>
-    <div id="Happy_Customer">
+    <div  style="font-size: 13px;" id="Happy_Customer">
       <!-- append the data  -->
     </div>
 </div>  
 <!-- fifth part is here  -->
 <!-- sixth part is not here -->
-<h1 style="color: grey; margin-left:90px; margin-top:30px ;">Our Investors</h1>
+<h1 style="color: grey; margin-left:90px; margin-top:90px ;">Our Investors</h1>
 
 <div id="third_home" style="margin-top: 40px; width: 86%;">
   <div>
@@ -358,7 +358,7 @@
 
 </div>
 <!-- 11th part here is done and the homepage is also  -->
-<div id="service" style="width: 100%;">
+<div id="service" style="width: 100%; margin-top: 20px;">
   <p>Serviceable cities</p>
   <div>
   <div>
@@ -393,3 +393,11 @@
   </body>
 </html>
 <script src="./index.js"></script>
+<script>
+  document.querySelector("#search").addEventListener("click",()=>{
+    window.location.href="hyundai_search_result.html"
+  })
+  document.querySelector(".loveit").addEventListener("click",()=>{
+   window.location.href="homepage2.html"
+  })
+</script>

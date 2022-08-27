@@ -7,58 +7,56 @@
     <title>Document</title>
 </head>
 <style>
- #main #container{
-    border :10px solid;
-  }
-  #rental{
-            /* border: 2px solid; */
-            width: 40%;
-            height:450px;
-            margin-left: 7%;
+ #rental{
+            width: 35%;
+            margin-left: 10%;
             text-align: center;
-            margin-top: 50px;
-            position:absolute ;
-            background-color: #fff;
-           padding: 2%;
-           border-radius: 10px;
-           
+            position: absolute;
+           background-color:white ;
+            height: 70vh;
+            margin-top: 5%;
+            padding: 15px;
         }
         #rental>div:nth-child(1){
             display: flex;
             background-color: rgb(73,166,186);
             border-radius: 30px;
             padding:2%;
-            gap: 10%;
-            padding-right: 5%;
-            height: 22%;
+            gap: 5%;
+            /* padding-right: 2%; */
+            /* padding-left: 5%; */
+            height: 23%;
             
         }
-        #rental>div:nth-child(1)>div:nth-child(1){
+        #rental>div:nth-child(1)>div:nth-child(2){
             background-color: white;
             border-radius: 25px;
             text-align: center;
-            width: 50%;
-            line-height: 10px;
-            padding: 0% 5%;
+            width: 45%;
+            /* line-height: 10px; */
+            padding: 2% 5%;
+           
         }
         #rental>div:nth-child(1)>div>p{
-            font-size: 25px;
-            padding-top:20px ;
+            font-size: 15px;
         }
-        #rental>div:nth-child(1)>div:nth-child(2){
+        #rental>div:nth-child(1)>div:nth-child(1){
             color: white;
-            line-height: 10px;
+            /* line-height: 10px; */
+            width: 45%;
+            margin-left: 2%;
+            padding: 2% 5%;
         }
 
         #rental>img{
-            width: 30%;
+            width: 50%;
             margin-top: 10%;
             margin-bottom: 2%;
            
             
         }
         #rental>p{
-            font-size: 32px;
+            font-size: 20px;
             margin-top: -0.01%;
             color: grey;
 
@@ -66,15 +64,15 @@
         #city{
             border: 1px solid grey;
             width: 100%;
-            border-radius: 20px 20px 0px 0px ;
+            border-radius: 20px ;
             font-size: 28px;
-            height: 8vh;
-            padding: 0% 10%;
+            height: 9vh;
+            padding: 1% 10%;
             color: black;
             font-weight: bold;
         }
         #start{
-            width: 50%;
+            width: 44.4%;
             height: 7.5vh;
             border-radius: 0px 0px 0px 20px;
             border: 1px solid grey;
@@ -84,7 +82,7 @@
             font-weight:700;
         }
         #end{
-            width: 50%;
+            width: 44.52%;
             height: 7.5vh;
             font-size: 25px;
             border-radius: 0px 0px 20px 0px;
@@ -108,11 +106,59 @@
             text-align: center;
             color:white
         }
-        #rentalcss{
-         
-          border: 5px solid red;
-          width: 40%;
+        #dekho{
+            display: flex;
+            /* gap:5%; */
+            margin-top: 5%;
+            width: 100%;
 
+        }
+        #dekho>div>div{
+            background-color: rgb(28,148,167);
+            padding: 0% 10%;
+
+        }
+        .d1{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .dekho2{
+            width: 50%;
+        }
+        .dekho2>div{
+            border-radius: 10px;
+            color: white;
+            font-size: 20px;
+            font-weight: 750;
+            width: 80%;
+            line-height: 25px;
+            height: 120%;
+            padding-top:40px ;
+            margin-left: 9%;
+          
+
+        }
+        .dekho2>div>p{
+            margin-left: -35%;
+            /* margin-top: -5%; */
+            
+        }
+        .dekho2>p{
+            font-size: 15px;
+            color: rgb(185, 184, 184);
+            margin-top: -1%;
+            margin-left: -30%;
+        }
+        #log1{
+            width: 10%;
+            height: 3vh;
+            margin-left: -90%;
+            margin-top: -100vh;
+            
+        }
+        #slt{
+            margin-left: 50%;
         }
         #cont_6 {
             border: 1px solid black;
@@ -199,6 +245,81 @@
             font-weight: bold;
         }
 </style>
+<style>
+  /* cont_3 */
+  #cont_3{
+     border: 1px solid rgb(224, 224, 224);
+     margin: 10px 0px 0px 0px;
+     background-color: rgb(236, 236, 236);
+     border-radius: 10px;
+     padding:2% 5% ;
+ }
+ #cont_3 h1 {
+     margin-left: 2vw;
+ }
+ #table {
+     width: 100%;
+     height: auto;
+     border: 1px solid rgb(221, 221, 221);
+     margin: auto auto 5vh 2vw;
+     padding: 30px;
+     border-radius: 10px;
+     margin-left: -20px;
+ }
+ .row {
+     height: 10vh;
+     border-bottom:  1px solid grey;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+ .row > div:first-child,.last_row > div:nth-child(1), .hed_sub > div:nth-child(1) {
+     width: 50%;
+     height: 10vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ .hed_sub {
+     border-bottom:  1px solid grey;
+     padding-top: 10px;
+     height: 10vh;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+ .hed_sub > div {
+     height: 100%;
+ }
+ .row > div:nth-child(2),.hed_sub > div:nth-child(2){
+     box-shadow: rgba(99, 99, 99, 0.35) 0px 0px 15px;
+     width:20%;
+     height: 10vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: white;
+ }
+ .row > div:nth-child(3),.last_row > div:nth-child(3), .hed_sub > div:nth-child(3){
+     width:18%;
+     height: 10vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ .last_row{
+     height: 5vh;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+ .last_row > div:nth-child(2){
+     box-shadow: rgba(99, 99, 99, 0.35) 0px 0px 15px;
+     width: 20%;
+     height: 5vh;
+     background-color: white;
+ }
+</style>
 <link rel="stylesheet" href="homepage2.css">
 <body>
     <div id="navbar1">
@@ -231,32 +352,58 @@
       <div id="first_part">
         <div id="main">
             <div id="container">
-                <div id="rental">
-                  <div>
-                      <div id="gor">
-                          <h1 style="margin-top: 6%;">Rentals</h1>
-                          <p style="width: 200px;font-size: 16px;">For hours & days</p>
-                      </div>
-                      <div id="gos">
-                          <h1  style="margin-top: 6%;">Subscriptions</h1>
-                          <p style="width: 200px; font-size: 16px;">For months & years</p>
-                      </div>
-                  </div>
-                  <img src="https://www.revv.co.in/imgs/logo-rentals.svg" alt="">
-                  <p  style="width: 200px;font-size: 16px; margin-left: 30%;">Self drive car rentals in India</p>
-                  <select name="" id="city">
-                      <option value="Delhi-NCR">Delhi-NCR</option>
-                      <option value="Bangalore">Bangalore</option>
-                      <option value="Hyderabad">Hyderabad</option>
-                      <option value="Mumbai">Mumbai</option>
-                      <option value="Chennai">Chennai</option>
-                      <option value="Pune">Pune</option>
-                  </select><br>
-                  <input type="calendar" id="start" placeholder="Start time">
-                  <input type="calendar" id="end" placeholder="End time"> 
-                  <button id="search">Search</button>   
-                  
-              </div>
+              <div id="rental">
+                <div>
+                    <div>
+                        <h2 onclick="gotosubs()">Rentals</h2>
+                        <p>For hours & days</p>
+                    </div>
+                    <div>
+                        <h2>Subscriptions</h2>
+                        <p>For months & years</p>
+                    </div>
+                </div>
+                <img src="https://www.revv.co.in/assets/subscription/brandLogo/subscription_web.png" alt="">
+                <p>Car Subscription in India</p>
+                
+                    <select name="" id="city">
+                        <option value="Delhi-NCR">Delhi-NCR</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Pune">Pune</option>
+                    </select><br>
+               
+               
+        
+                <div id="dekho">
+                    <div class="dekho2">
+                        <div style="padding-top: 20px;">
+                            <div class="d1">
+                                <p>Search</p>
+                                <p>></p>
+                            </div> 
+                            <p>by the month</p>
+                        </div>
+                        <p>For 1,2,3 & 6 months</p>
+                        
+                    </div>
+                    <div class="dekho2">
+                        <div style="padding-top: 20px;">
+                            <div class="d1">
+                                <p>Search</p>
+                                <p>></p>
+                            </div> 
+                            <p>by the year</p>
+                        </div>
+                        <p>For 1 & 2 years</p>
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
               <div id="imagesOfHome">
       <div style="background-color:#fff7e2 ;">
         <img src="https://www.revv.co.in/assets/RentalImages/HomeScreen/heroCarousel/ST_Desktop_1_FG.webp" alt="">
@@ -432,7 +579,71 @@
     <hr>
 
   </div>
-  <div><a href=""><button style="padding: 10px 20px; margin-left: 90px ;">View all </button></a></div>
+  <div><a href="faq.html"><button style="padding: 10px 20px; margin-left: 90px ;">View all </button></a></div>
+
+<!-- here is the comparison -->
+
+<div id="cont_3">
+  <h1 style="color: #a8b5c0;" >Car subscription vs buying</h1>
+  <div id="table">
+      <div   class="hed_sub" class="row">
+          <div ></div>
+          <div>Subscribe</div>
+          <div>Buy</div>
+      </div>
+      <div>
+          <div class="row">
+              <div>Zero down payment & road tax</div>
+              <div>
+                  <img src="https://www.revv.co.in/grapheneImages/newopen/mark.svg" alt="">
+              </div>
+              <div>
+                  <img src="https://www.revv.co.in/grapheneImages/newopen/cross.svg" alt="">
+              </div>
+          </div>
+      </div>
+      <div>
+          <div class="row">
+              <div>No long term commitment  No loan process, no cibil check</div>
+              <div>
+                  <img src="https://www.revv.co.in/grapheneImages/newopen/mark.svg" alt="">                           
+              </div>
+              <div>
+                  <img src="https://www.revv.co.in/grapheneImages/newopen/cross.svg" alt="">
+              </div>
+          </div>
+      </div>
+      <div>
+          <div class="row">
+              <div>No loan process, no cibil check</div>
+              <div>
+                  <img src="https://www.revv.co.in/grapheneImages/newopen/mark.svg" alt="">
+              </div>
+              <div>
+                  <img src="https://www.revv.co.in/grapheneImages/newopen/cross.svg" alt="">
+              </div>
+          </div>
+      </div>
+      <div>
+          <div class="row">
+              <div>Doorstep pick & drop for maintenance & service</div>
+              <div>
+                  <img src="https://www.revv.co.in/grapheneImages/newopen/mark.svg" alt="">
+              </div>
+              <div>
+                  <img src="https://www.revv.co.in/grapheneImages/newopen/cross.svg" alt="">
+              </div>
+          </div>
+      </div>
+      <div>
+          <div class="last_row">
+              <div></div>
+              <div></div>
+              <div></div>
+          </div>
+      </div>
+  </div>
+</div>
 
   <!-- last footer  -->
   <div id="cont_6">
@@ -474,3 +685,9 @@
 </body>
 </html>
 <script src="homepage2.js"></script>
+
+<script>
+function gotosubs(){
+  window.location.href="index.html"
+}
+</script>
