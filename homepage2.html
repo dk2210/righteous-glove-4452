@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ #main #container{
+    border :10px solid;
+  }
+  #rental{
+            /* border: 2px solid; */
+            width: 40%;
+            height:450px;
+            margin-left: 7%;
+            text-align: center;
+            margin-top: 50px;
+            position:absolute ;
+            background-color: #fff;
+           padding: 2%;
+           border-radius: 10px;
+           
+        }
+        #rental>div:nth-child(1){
+            display: flex;
+            background-color: rgb(73,166,186);
+            border-radius: 30px;
+            padding:2%;
+            gap: 10%;
+            padding-right: 5%;
+            height: 22%;
+            
+        }
+        #rental>div:nth-child(1)>div:nth-child(1){
+            background-color: white;
+            border-radius: 25px;
+            text-align: center;
+            width: 50%;
+            line-height: 10px;
+            padding: 0% 5%;
+        }
+        #rental>div:nth-child(1)>div>p{
+            font-size: 25px;
+            padding-top:20px ;
+        }
+        #rental>div:nth-child(1)>div:nth-child(2){
+            color: white;
+            line-height: 10px;
+        }
+
+        #rental>img{
+            width: 30%;
+            margin-top: 10%;
+            margin-bottom: 2%;
+           
+            
+        }
+        #rental>p{
+            font-size: 32px;
+            margin-top: -0.01%;
+            color: grey;
+
+        }
+        #city{
+            border: 1px solid grey;
+            width: 100%;
+            border-radius: 20px 20px 0px 0px ;
+            font-size: 28px;
+            height: 8vh;
+            padding: 0% 10%;
+            color: black;
+            font-weight: bold;
+        }
+        #start{
+            width: 50%;
+            height: 7.5vh;
+            border-radius: 0px 0px 0px 20px;
+            border: 1px solid grey;
+            color: black;
+            font-size: 27px;
+            padding-left: 5%;
+            font-weight:700;
+        }
+        #end{
+            width: 50%;
+            height: 7.5vh;
+            font-size: 25px;
+            border-radius: 0px 0px 20px 0px;
+            border: 1px solid grey;
+            padding-left: 5%;
+            font-size: 27px;
+            font-weight: 700;
+            margin-left: -1%;
+        }
+        #search{
+            width: 100%;
+            height: 8vh;
+            border: 1px solid grey;
+            border-radius: 40px;
+            background-color: rgb(164,219,218);
+            
+            font-size: 30px;
+            font-weight: 900;
+            
+            margin-top: 8%;
+            text-align: center;
+            color:white
+        }
+        #rentalcss{
+         
+          border: 5px solid red;
+          width: 40%;
+
+        }
+        #cont_6 {
+            border: 1px solid black;
+            height: 80vh;
+            display: flex;
+            gap: 20px;
+            justify-content:space-evenly;
+        }
+        #cont_6 > div:first-child {
+            width: 25%;
+            height: 30%;
+            margin: 10% 0px 0px 0px ;
+        }
+        #cont_6> div:nth-child(2){
+            width: 5%;
+            height: 20%;
+            margin: 10% 0px 0px 0px ;
+            text-align: center;
+        }
+        #cont_6> div:nth-child(2)>p {
+            margin: 0px 0px 5px 0px;
+            cursor: pointer;
+        }
+        #home:hover,#faqs:hover {
+            font-weight: bold;
+        }
+        #cont_6> div:nth-child(3){
+            width: 20%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 10% 0px 0px 0px ;
+        }
+        #logo_box {
+            width: 10vh;
+            height: 8vh;
+        }
+        #small_logos {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #social_tag {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        #small_logos > div {
+            width: 20px;
+            padding: 5px;
+            height: 20px;
+            display: flex;
+            align-items: center;justify-content: center;
+            border-radius: 50%;
+        }
+        #small_logos > div:hover {
+            color: white;
+            background-color: teal;
+        }
+        #small_logos + p {
+            margin-left: 20px;
+        }
+        .social_media_cont {
+        border: 1px solid rgb(226, 226, 226);
+         width: 90%;
+         height: 45px;
+         margin:5px auto 10px 20px;
+         display: flex;
+         align-items: center;
+         padding: 8px;
+         color: grey;
+         cursor: pointer;
+        }
+        #apple {
+            margin-bottom: 2px;
+        }
+        .social_media_cont > img {
+            margin-right: 4px;
+        }
+        .social_media_p {
+            font-weight: bold;
+        }
+        .social_media_cont:hover {
+            color: teal;
+            font-weight: bold;
+        }
+</style>
+<link rel="stylesheet" href="homepage2.css">
+<body>
+    <div id="navbar1">
+        <div>
+          <div>
+            <img
+              src="https://www.revv.co.in/grapheneImages/newopen/logo.svg"
+              alt="No internet connection"
+            />
+            <div id="sanitised">sanitised,safe</div>
+          </div>
+        </div>
+        <div>
+          <div class="border"><b>Hyundai</b> Subscription</div>
+          <div class="border"><b>Mahindra</b> Subscription</div>
+          <div class="nav_color" >How it works</div>
+          <div class="nav_color">Subscribe vs Buy
+        </div>
+          <div class="nav_color" >FAQs</div>
+          <div id="exit_Log">
+            <img
+              src="	https://www.revv.co.in/grapheneImages/newopen/ic-web-profile-login.svg"
+              alt="error"
+            />
+          </div>
+          <div class="nav_color">Login or Signup</div>
+        </div>
+      </div>
+      <!-- navbar completed -->
+      <div id="first_part">
+        <div id="main">
+            <div id="container">
+                <div id="rental">
+                  <div>
+                      <div id="gor">
+                          <h1 style="margin-top: 6%;">Rentals</h1>
+                          <p style="width: 200px;font-size: 16px;">For hours & days</p>
+                      </div>
+                      <div id="gos">
+                          <h1  style="margin-top: 6%;">Subscriptions</h1>
+                          <p style="width: 200px; font-size: 16px;">For months & years</p>
+                      </div>
+                  </div>
+                  <img src="https://www.revv.co.in/imgs/logo-rentals.svg" alt="">
+                  <p  style="width: 200px;font-size: 16px; margin-left: 30%;">Self drive car rentals in India</p>
+                  <select name="" id="city">
+                      <option value="Delhi-NCR">Delhi-NCR</option>
+                      <option value="Bangalore">Bangalore</option>
+                      <option value="Hyderabad">Hyderabad</option>
+                      <option value="Mumbai">Mumbai</option>
+                      <option value="Chennai">Chennai</option>
+                      <option value="Pune">Pune</option>
+                  </select><br>
+                  <input type="calendar" id="start" placeholder="Start time">
+                  <input type="calendar" id="end" placeholder="End time"> 
+                  <button id="search">Search</button>   
+                  
+              </div>
+              <div id="imagesOfHome">
+      <div style="background-color:#fff7e2 ;">
+        <img src="https://www.revv.co.in/assets/RentalImages/HomeScreen/heroCarousel/ST_Desktop_1_FG.webp" alt="">
+      </div>
+              </div>
+              <button  id="next">next</button>
+              <button  id="prev">prev</button>
+            </div>
+          </div>
+    </div> 
+    <!-- first part is completed -->
+
+    <div id="hyundaibox">
+      <div id="first">
+        <h2>What is Hyundai Subscription?</h2>
+        <p>Hyundai Subscription is an entirely new way of getting a brand new car, without having to buy or own one. It is more flexible than traditional car ownership, and also more affordable. Raditional car ownership, and also new car, without…</p>
+         <div>
+          <b>Know More</b>
+         </div>
+      </div>
+    
+    
+       <div id="youtube"><iframe width="500" height="250" src="https://www.youtube.com/embed/JWolzgxYS2k">
+      </iframe>
+         
+       </div>
+    
+    </div>
+    <!-- this is the hunadi subscription -->
+    <div id="first_slider1" >
+      <div id="home_top1">
+            <h1 style="color: grey;">Sanitized & safe cars</h1>
+         <div><button class="button1"><</button> <button class="button1">></button></div> 
+        </div>
+        <div id="container1">
+          <!-- append the data  -->
+        </div>
+  </div>
+  <!-- this is the safest car  -->
+
+  
+<div id="workssection">
+  <h1 style="margin-top:100px; margin-left:70px;">How it works</h1 >
+  
+  <hr>
+ 
+ <div id="detail">
+ 
+ <table>
+   
+   <tr >
+     <td></td>
+     <td><img class="small" src="https://www.revv.co.in/grapheneImages/newopen/ic-howit-work-1@2x.png" alt=""></td>
+     <td></td>
+     <td><img class="small" src="https://www.revv.co.in/grapheneImages/newopen/ic-howit-work-2@2x.png" alt=""></td>
+  </tr>
+ 
+  <tr>
+    <td><img src="https://www.revv.co.in/grapheneImages/newopen/ic-web-x-1.svg" alt=""></td>
+    <td>
+      <h3>Select & Reserve</h3>
+      <p>Pick your car model and reserve online</p>
+    </td>
+    <td><img  src="https://www.revv.co.in/grapheneImages/newopen/ic-web-x-2.svg" alt=""></td>
+    <td>
+     <h3>Super Fast Processing</h3>
+      <p>We will call you to understand your </p>
+      <p> preferences, basic KYC, Refundable Security </p>
+      <p> Deposit etc. (No CIBIL Check Required)</p></td>
+    </tr>
+ 
+ 
+    <tr >
+     <td></td>
+     <td><img class="small" src="https://www.revv.co.in/grapheneImages/newopen/ic-howit-work-3@2x.png" alt=""></td>
+     <td></td>
+     <td><img class="small" src="https://www.revv.co.in/grapheneImages/newopen/ic-howit-work-4@2x.png" alt=""></td>
+  </tr>
+  <tr>
+   <td><img src="https://www.revv.co.in/grapheneImages/newopen/ic-web-n-3.svg" alt=""></td>
+   <td>
+     <h3>Car Ordering</h3>
+     <p>We will order your brand new Hyundai car for you and get it within 30-45 days</p>
+   </td>
+   <td><img  src="https://www.revv.co.in/grapheneImages/newopen/ic-web-x-4.svg" alt=""></td>
+   <td><h3>Super Fast Processing</h3>
+     <p>Get your Hyundai car delivered at your </p>
+     <p> doorstep or pick it up from showroom </p>
+     </td>
+   </tr>
+ 
+ 
+ 
+   <tr >
+     <td></td>
+     <td><img class="small" src="https://www.revv.co.in/grapheneImages/newopen/ic-howit-work-5@2x.png" alt=""></td>
+     <td></td>
+     <td><img class="small" src="https://www.revv.co.in/grapheneImages/newopen/ic-howit-work-6@2x.png" alt=""></td>
+  </tr>
+ 
+ 
+  <tr>
+   <td><img src="https://www.revv.co.in/grapheneImages/newopen/ic-web-x-5.svg" alt=""></td>
+   <td>
+     <h3>
+       Hassle Free Experience</h3>
+     <p>Enjoy your Hyundai car! We'll take care of routine service & insurance claims with doorstep service</p>
+   </td>
+   <td><img  src="https://www.revv.co.in/grapheneImages/newopen/ic-web-x-6.svg" alt=""></td>
+   <td><h3>Return the Car or Acquire it</h3>
+     <p>Continue using the car or return it anytime. </p>
+     <p> And if you fall in love with it, you can buy it </p>
+     <p>from us by paying a settlement fee.</p>
+     </td>
+   </tr>
+  
+ </table>
+  <!-- how it works -->
+ 
+ </div>
+ 
+ 
+ </div>
+   <!-- --------------------------------------------------------FAQ'S SECTION------------------------------------------------- -->
+
+   <div id="faq" >
+
+    <h1>FAQs</h1 style="margin-top:100px ;">
+
+    <div onclick="faq1()">
+      <img src="./icons/plus-icon.png" alt="" id="faq11">
+      <h3>What are my liabilities in case of damage/ accident of the Hyundai car?</h3>
+      <p id="para1"></p>
+    </div>
+
+    <br>
+    <hr>
+
+    <div onclick="faq2()">
+      <img src="./icons/plus-icon.png" alt="" id="faq22">
+      <h3>Can I end my Mahindra car subscription early, or choose to keep the car longer if I am in Bangalore?</h3>
+      <p id="para2"></p>
+    </div>
+
+    <br>
+    <hr>
+
+    <div onclick="faq3()">
+      <img src="./icons/plus-icon.png" alt="" id="faq33">
+      <h3>I was planning to take the Mahindra car subscription in Bangalore, are there any restrictions on what can I use the car for?</h3>
+      <p id="para3"></p>
+    </div>
+
+    <br>
+    <hr>
+
+    <div onclick="faq4()">
+      <img src="./icons/plus-icon.png" alt="" id="faq44">
+      <h3>What are the benefits of Mahindra Car Subscription in Bangalore?</h3>
+      <p id="para4"></p>
+    </div>
+
+    <br>
+    <hr>
+
+    <div onclick="faq5()">
+      <img src="./icons/plus-icon.png" alt="" id="faq55">
+      <h3>If I book a Mahindra car subscription in Bangalore, what will be the car registration type and whose name will it be registered in?</h3>
+      <p id="para5"></p>
+    </div>
+
+    <br>
+    <hr>
+
+  </div>
+  <div><a href=""><button style="padding: 10px 20px; margin-left: 90px ;">View all </button></a></div>
+
+  <!-- last footer  -->
+  <div id="cont_6">
+    <div>
+        <div>
+            <div id="logo_box"><img src="https://www.revv.co.in/grapheneImages/newopen/logo.svg" alt="No internet connection"></div>
+            <div id="sanitised">sanitised,safe</div>
+        </div>
+        <p>2022 Primemover Mobility Technologies Pvt Ltd.</p>
+        <p>All rights reserved</p>
+    </div>
+
+    <div>
+        <p id="home">Home</p>
+        <p id="faqs">FAQs</p>
+    </div>
+
+    <div>
+        <p id="social_tag">Social</p>
+        <div id="small_logos">
+            <div><i class="fa-brands fa-facebook-f"></i></div>
+            <div><i class="fa-brands fa-twitter"></i></div>
+            <div><i class="fa-brands fa-instagram"></i></div>
+            <div><i class="fa-brands fa-youtube"></i></div>
+            <div><i class="fa-brands fa-linkedin-in"></i></div>
+        </div>
+        <p>Download the Revv App!</p>
+        <div class="social_media_cont">
+            <img id="apple" src="https://www.revv.co.in/grapheneImages/newopen/apple-icon.svg" alt="">
+            <p>Download <span class="social_media_p">App Store</span></p>
+        </div>
+        <div class="social_media_cont">
+            <img src="https://www.revv.co.in/grapheneImages/newopen/play-store.svg" alt="">
+            <p>Download <span class="social_media_p">Google Play</span></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="homepage2.js"></script>
