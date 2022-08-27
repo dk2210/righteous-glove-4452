@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing...</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        body {
+            /* display: flex; */
+            /* justify-content: center; */
+            font-family: 'Poppins';
+            /* background-image: linear-gradient(45deg,#efefef 25%,rgba(239,239,239,0) 25%,rgba(239,239,239,0) 75%,#efefef 75%,#efefef),linear-gradient(45deg,#efefef 25%,rgba(239,239,239,0) 25%,rgba(239,239,239,0) 75%,#efefef 75%,#efefef);
+            background-color: hsl(0, 0%, 90%) */
+            /* background-color: rgb(85, 216, 216); */
+        }
+        #containor {
+            margin:8% auto auto auto ;
+            width: 40%;
+            text-align: center;
+            color: rgb(197, 197, 197);
+        }
+        #image_box {
+            margin: 0px;
+        }
+        h2{
+            margin: 0px;
+        }
+        #gif_box {
+            padding: 0px;
+        }
+        #gif_box  > img {
+            width: 40%;
+            height: 40%;
+        }
+        /* navbar */
+        .navbar_sticky {
+            position:sticky;
+            top: 0;
+            background-color: white;
+        }
+        #navbar1{
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            background-color: white;
+        }
+        #navbar1>div+div{
+            display: flex;
+            justify-content: space-evenly;
+            margin-right: 10px;
+            width: 700px;
+            padding-top: 10px;
+        }
+        #navbar1>div{
+            margin-left: 100px    
+        }
+        .border{
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            margin-bottom: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 5px;   
+        }  
+        #sanitised{
+            margin-top: -13px;
+            font-size: 13px;
+            margin-left:22px
+        }
+        .border:hover,.nav_color:hover{
+            color: teal;
+            cursor: pointer;
+        }
+        .nav_color{
+            padding-top: 5px;
+        }
+        #exit_Log{
+            margin-right: -25px;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body onload="callme()">
+    <section class="navbar_sticky" name="navbar">
+        <div id="navbar1">
+            <div>
+                <div><img src="https://www.revv.co.in/grapheneImages/newopen/logo.svg" alt="No internet connection"></div>
+                <div id="sanitised">sanitised,safe</div>
+            </div>
+            <div >
+                <div class="border"><b>Hyundai</b> Subscription</div>
+                <div class="border"><b>Mahindra</b> Subscription</div>
+                <div class="nav_color">FAQs</div>
+                <div id="exit_Log"><img src="	https://www.revv.co.in/grapheneImages/newopen/ic-web-profile-login.svg" alt="error"></div>
+                <div class="nav_color">Login or Signup</div>
+            </div>
+        </div>
+
+    </section>
+    <div id="containor">
+        <div id="image_box">
+            <img src="https://www.revv.co.in/grapheneImages/newopen/logo.svg" alt="logo">
+        </div>
+        <h2>Welcome to revv</h2>
+        <div id="gif_box">
+            <img src="https://cdn.dribbble.com/users/172519/screenshots/3520576/dribbble-spinner-800x600.gif" alt="">
+            <!-- https://i.pinimg.com/originals/fa/87/77/fa87774590186b287a5338d7c87afc0c.gif -->
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let page_obj= JSON.parse(localStorage.getItem("page"));
+    function callme() {
+        setTimeout ( () => {
+            console.log("Hello");
+            window.location.href=page_obj.pageName;
+        },3000)
+    }
+
+</script>
