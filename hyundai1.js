@@ -207,3 +207,20 @@ function indexpage()
 function faqsection01(){
    window.location.href="faq.html"
 }
+
+function hyundaisub(){
+   
+  let x=document.getElementById("selectcity").value;
+  let y=document.getElementById("selectdate").value;
+  let z=x&&y;
+  console.log(z)
+  if(z)
+  {
+   window.location.href="hyundai_search_result.html"
+  }
+else{
+   alert("Please select Date and Time")
+}
+
+   
+}

@@ -407,15 +407,19 @@ h4 {
 #hyundai1,
 #searchproduct {
   display: block;
-  border: 1px solid;
+  
   width: 40%;
-  padding: 2%;
+  padding: 3%;
   margin: auto;
   margin-top: 5%;
   background-color: rgb(123, 196, 212);
   border: none;
   outline: none;
   cursor: pointer;
+  border-radius: 5px;
+  font-weight:bolder;
+  font-size: 20px;
+  color:white;
 }
 
 #hyundai1,
@@ -429,11 +433,11 @@ h4 {
   margin-bottom: -4%;
 }
 
-#hyundai1,
-#explore b {
+
+#explore b>a {
   margin-left: 34%;
   color: rgb(28, 171, 162);
-
+  text-decoration: none;
 }
 
 #hyundai1,
