@@ -42,10 +42,11 @@ body {
 #work {
   margin-left: 35%;
   color: #4c2552;
+  text-decoration: none;
 }
 
 #mahindra1,
-#login {
+#login_bar {
   margin-right: 2%;
   margin-left: 2%;
   color: #4c2552;

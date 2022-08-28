@@ -35,9 +35,16 @@ body {
 #work {
   margin-left: 30%;
   color: #4c2552;
+  text-decoration: none;
 }
-
-#login {
+#work>a{
+  text-decoration: none;
+  color: black;
+}
+#works:hover{
+  color:rgb(28, 171, 162);
+}
+#login_bar {
   margin-right: 2%;
   margin-left: 2%;
   color: #4c2552;
@@ -234,6 +241,7 @@ button {
   padding:1%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin-top: 10%;
+  border-radius: 8px;
 }
 #hyundaibox>div:first-child>h2{
   margin-left: 3%;
@@ -576,11 +584,13 @@ table{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-top: -2%;
   background-color: white;
+  border-radius: 5px;
 }
 
 #lessgrest {
   display: flex;
-  gap: 50%
+  gap: 50%;
+  margin-left: 3%;
 }
 
 #xyz {
@@ -685,4 +695,11 @@ table{
 
 #horizontal {
   margin-left: 10%;
+}
+#subscribede>a{
+  text-decoration: none;
+  color: black;
+}
+.quote{
+  margin-top: 6%;
 }

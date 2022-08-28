@@ -19,10 +19,11 @@
     <p>Sanitised. Safe</p>
     <img src="https://www.revv.co.in/grapheneImages/hyundai/mahindra-logo-sub@2x.png" alt="hyundai Subscription"
       id="hyundai">
-    <h4 id="work"><a href="#works" id="link">How it Works</a></h4>
-    <h4>Subscribe vs Buy</h4>
-    <h4>FAQs</h4>
-    <h4 id="login">Login and signup</h4>
+    <h4 id="work"><a href="#workssection" id="link">How it Works</a></h4>
+    <h4 id="subscribede"><a href="#subvsbuy">Subscribe vs Buy</a>
+      </h4>
+    <h4 onclick="faqs()">FAQs</h4>
+    <div id="login_bar" class="nav_color" onclick="callmelogin()">Login or Signup</div>
   </div>
 
   <!-- ----------------------------SEARCH CITY INPUT-------------------------------- -->
@@ -41,11 +42,11 @@
         <option value="Chennai">Chennai</option>
         <option value="Pune">Pune</option>
       </select>
-      <div id="newcar">
+      <div id="newcar" onclick="newCars()">
         <h3>Find Brand New Cars</h3>
         <p>Ordered especially for you</p>
       </div>
-      <div id="unboxcar">
+      <div id="unboxcar" onclick="unboxedCars()">
         <h3>Find Unboxed Cars</h3>
         <p>As good as new</p>
 
@@ -110,7 +111,7 @@
     <div id="first">
       <h2>What is Mahindra Subscription?</h2>
       <p>Mahindra Subscription is an entirely new way of owning a Mahindra SUV, without having to buy one. It is not only more flexible than traditional car ownership, but also more convenient and affordable, without any down payment, insurance charges, and road tax & registration liability...</p>
-      <div>
+      <div onclick="knowmore()">
         <b>Know More</b>
       </div>
     </div>
@@ -161,7 +162,7 @@
     <p>month</p>
     <img id="tarajan" src="https://s3-us-west-2.amazonaws.com/revvselfdrivecar/Open/SUV_new/Mahindra_Scorpio.jpg" alt="cars">
   </div>
-  <div>
+  <div onclick="seeall()">
     <img src="https://www.revv.co.in/grapheneImages/newopen/see-all.svg" alt="">
     <b>See All</b>
   </div>
@@ -420,18 +421,18 @@
     <div id="boxofFeaturedOnflex" onclick="indiatime()">
       <div class="boxofFeaturedOn">
         <img src="https://www.revv.co.in/grapheneImages/newopen/India-Today-Logo.jpg" alt="">
-        <img src="https://www.revv.co.in/grapheneImages/newopen/left-quote.svg" alt="">
+        <img class="quote" src="https://www.revv.co.in/grapheneImages/newopen/left-quote.svg" alt="">
         <p>Mahindra introduces subscription-based service for its personal range of vehicles</p>
       </div>
       
       <div class="boxofFeaturedOn">
         <img src="https://www.revv.co.in/grapheneImages/newopen/logo-et-prime@2x.jpg" alt="">
-        <img src="https://www.revv.co.in/grapheneImages/newopen/left-quote.svg" alt="">
+        <img class="quote" src="https://www.revv.co.in/grapheneImages/newopen/left-quote.svg" alt="">
         <p>Why Hyundai & Mahindra are chasing this car-rental startup</p>
       </div>
       <div class="boxofFeaturedOn">
         <img src="https://www.revv.co.in/grapheneImages/newopen/logo-auto-car@2x.jpg" alt="">
-        <img src="https://www.revv.co.in/grapheneImages/newopen/left-quote.svg" alt="">
+        <img class="quote" src="https://www.revv.co.in/grapheneImages/newopen/left-quote.svg" alt="">
         <p>Mahindra partners Revv to bring subscription-based plan for retail customers</p>
       </div>
       

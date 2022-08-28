@@ -381,3 +381,75 @@ function unboxed1() {
     document.getElementById("secoundcar").innerText = "18,899/"
     document.getElementById("thirdcar").innerText = "24,899/"
 }
+
+function faqsection(){
+    window.location.href="faq.html";
+ }
+ function login(){
+    window.location.href="signup.html";
+ }
+
+ function knowmore(){
+    window.location.href="faq.html";
+ }
+ function newcars(){
+    window.location.href="hyundai_search_result.html";
+ }
+ function unboxcar()
+ {
+    window.location.href="hyundai_search_result.html";
+ }
+ function seeall(){
+    window.location.href="hyundai_search_result.html";
+ }
+
+
+ function callmelogin() {
+    if( document.getElementById("login_bar").innerText!="Login or Signup"){
+      alert("You have alerady logged in !");
+    }else  {
+      console.log("hello")
+      event.preventDefault();
+      let obj = {
+        pageName : "./login.html"
+    }
+    localStorage.setItem("page",JSON.stringify(obj));
+    window.location.href="./processing.html";
+    }
+  }
+  
+  // ------------------linking of login page to the index page----------//
+  
+  
+  let login_data;
+  if(localStorage.getItem("loginUser")==null){
+    login_data=[];
+  }else{
+    login_data = JSON.parse(localStorage.getItem("loginUser"));
+  
+  };
+  
+  callmeDis_name(login_data)
+  
+  function callmeDis_name(login_data){
+    let loginUserName = document.getElementById("login_bar")
+  if(login_data.length!=0){
+    loginUserName.innerText=login_data[login_data.length-1].Email;
+    loginUserName.style.color="teal";
+    loginUserName.style.fontWeight="bold";
+    loginUserName.style.textDecoration = "underline";
+    loginUserName.disabled=true
+  }else {
+    loginUserName.innerText = "Login or Signup";
+  }
+  console.log(login_data)
+  }
+  
+  // logout calling;
+  document.getElementById("exit_Log").addEventListener("click",callmeLogOut);
+  
+  function callmeLogOut(){
+    login_data=[];
+    localStorage.setItem("loginUser",JSON.stringify(login_data));
+    callmeDis_name(login_data);
+  }

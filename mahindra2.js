@@ -17,6 +17,7 @@ let citychange = () => {
         document.getElementById("amount1").innerText = "14,170";
         document.getElementById("amount2").innerText = "13,199";
     }
+    
     else if (x == "Delhi-NCR") {
         document.getElementById("amount1").innerText = "18,250";
         document.getElementById("amount2").innerText = "16,499";
@@ -384,3 +385,76 @@ function unboxed1() {
 function redirect(){
     window.location.href="mahindra1.html"
 }
+
+function faqs(){
+    window.location.href="faq.html"
+}
+
+function login(){
+    window.location.href="signup.html"
+}
+
+function newCars(){
+    window.location.href="mahindra_search_result.html"
+}
+
+function unboxedCars(){
+    window.location.href="mahindra_search_result.html"
+}
+
+function knowmore(){
+    window.location.href="faq.html"
+}
+function seeall(){
+    window.location.href="mahindra_search_result.html"
+}
+
+function callmelogin() {
+    if( document.getElementById("login_bar").innerText!="Login or Signup"){
+      alert("You have alerady logged in !");
+    }else  {
+      console.log("hello")
+      event.preventDefault();
+      let obj = {
+        pageName : "./login.html"
+    }
+    localStorage.setItem("page",JSON.stringify(obj));
+    window.location.href="./processing.html";
+    }
+  }
+  
+  // ------------------linking of login page to the index page----------//
+  
+  
+  let login_data;
+  if(localStorage.getItem("loginUser")==null){
+    login_data=[];
+  }else{
+    login_data = JSON.parse(localStorage.getItem("loginUser"));
+  
+  };
+  
+  callmeDis_name(login_data)
+  
+  function callmeDis_name(login_data){
+    let loginUserName = document.getElementById("login_bar")
+  if(login_data.length!=0){
+    loginUserName.innerText=login_data[login_data.length-1].Email;
+    loginUserName.style.color="teal";
+    loginUserName.style.fontWeight="bold";
+    loginUserName.style.textDecoration = "underline";
+    loginUserName.disabled=true
+  }else {
+    loginUserName.innerText = "Login or Signup";
+  }
+  console.log(login_data)
+  }
+  
+  // logout calling;
+  document.getElementById("exit_Log").addEventListener("click",callmeLogOut);
+  
+  function callmeLogOut(){
+    login_data=[];
+    localStorage.setItem("loginUser",JSON.stringify(login_data));
+    callmeDis_name(login_data);
+  }
