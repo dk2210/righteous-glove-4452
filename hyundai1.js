@@ -193,3 +193,8 @@ function left() {
       i--;
    }
 }
+
+
+function faqpage(){
+   window.location.href="faq.html"
+}
