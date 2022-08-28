@@ -51,14 +51,23 @@ body {
   margin-left: 35%;
   color: #4c2552;
 }
-
+#work>a:hover{
+  color: rgb(14, 186, 186);
+}
+#faqcolor:hover{
+  color: rgb(14, 186, 186);
+  cursor: pointer;
+}
 #hyundai1,
 #login {
   margin-right: 2%;
   margin-left: 2%;
   color: #4c2552;
 }
-
+#login:hover{
+  color: rgb(14, 186, 186);
+  cursor: pointer;
+}
 #hyundai1,
 #faq {
   margin-left: 7%;
@@ -450,4 +459,17 @@ h4 {
   text-decoration: none;
   color: #4c2552;
   ;
+}
+
+#viewall{
+  
+  /* border: 1px solid red; */
+  width:10%;
+  padding: 0.6%;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(28, 171, 162);
+  margin-top:20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }

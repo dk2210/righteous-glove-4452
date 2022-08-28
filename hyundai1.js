@@ -203,3 +203,7 @@ function indexpage()
 {
    window.location.href="index.html" 
 }
+
+function faqsection01(){
+   window.location.href="faq.html"
+}
