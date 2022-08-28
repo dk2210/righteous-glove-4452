@@ -439,5 +439,6 @@ document.getElementById("exit_Log").addEventListener("click",callmeLogOut);
 function callmeLogOut(){
   login_data=[];
   localStorage.setItem("loginUser",JSON.stringify(login_data));
+  alert("Logout ?")
   callmeDis_name(login_data);
 }
