@@ -301,23 +301,35 @@
     </style>
 </head>
 <body>
-    <section class="navbar_sticky" name="navbar">
+    <section class="navbar_sticky">
         <div id="navbar1">
+          <div>
             <div>
-                <div><img src="https://www.revv.co.in/grapheneImages/newopen/logo.svg" alt="No internet connection"></div>
-                <div id="sanitised">sanitised,safe</div>
+              <img
+                src="https://www.revv.co.in/grapheneImages/newopen/logo.svg"
+                alt="No internet connection"
+              />
+              <div id="sanitised">sanitised,safe</div>
             </div>
-            <div >
-                <div class="border"><b>Hyundai</b> Subscription</div>
-                <div class="border"><b>Mahindra</b> Subscription</div>
-                <div class="nav_color">FAQs</div>
-                <div id="exit_Log"><img src="	https://www.revv.co.in/grapheneImages/newopen/ic-web-profile-login.svg" alt="error"></div>
-                <div class="nav_color">Login or Signup</div>
+          </div>
+          <div>
+            <!-- <div id="b_1" class="border"> <a style="text-decoration: none; color: black;" href="hyundai1.html"><b> Hyundai</b> Subscription</a></div>
+            <div class="border"> <a style="text-decoration: none; color: black;" href="hyundai2.html"><b>Mahindra</b> Subscription</a>   </div>
+            <div class="nav_color"><a style="text-decoration: none; color: black;" href="faq.html">FAQs</a> </div> -->
+            <div class="border" onclick="callmehyundai()"><b> Hyundai</b> Subscription</div>
+            <div class="border" onclick="callmemahindra()"> <b>Mahindra</b> Subscription</div>
+            <div class="nav_color" onclick="callmefaq()">FAQs</div>
+            
+            <div id="exit_Log">
+              <img
+                src="	https://www.revv.co.in/grapheneImages/newopen/ic-web-profile-login.svg"
+                alt="error"
+              />
             </div>
+            <div id="login_bar" class="nav_color" onclick="callmelogin()">Login or Signup</div>
+          </div>
         </div>
-
-    </section>
-
+      </section>
     <section name="mainbody">
         <div id="mainbody">
             <div id="cont_1">
@@ -351,10 +363,12 @@
                     <p><i class="fa-solid fa-location-dot"></i>Delivery location</p>
                     <select style="font-family: Poppins;" id="delivery_location">
                         <option value="">Select your city</option>
-                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Ahmedabad">Bangalore</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi-NCR">Delhi-NCR</option>
+                        <option value="Chennai">Chennai</option>
                         <option value="Pune">Pune</option>
-                        <option value="Baroda">Baroda</option>
-                        <option value="Delhi">Delhi</option>
                     </select>
                 </div>
 
@@ -440,4 +454,60 @@
         }
     }
 
+    
+// page directiing
+function callmehyundai(){
+  event.preventDefault();
+  let obj = {
+    pageName : "./hyundai1.html"
+}
+localStorage.setItem("page",JSON.stringify(obj));
+window.location.href="./processing.html";
+}
+
+function callmemahindra(){
+  event.preventDefault();
+  let obj = {
+    pageName : "./mahindra1.html"
+}
+localStorage.setItem("page",JSON.stringify(obj));
+window.location.href="./processing.html";
+}
+
+function callmefaq() {
+  event.preventDefault();
+  let obj = {
+    pageName : "./faq.html"
+}
+localStorage.setItem("page",JSON.stringify(obj));
+window.location.href="./processing.html";
+}
+
+function callmelogin() {
+  event.preventDefault();
+  let obj = {
+    pageName : "./login.html"
+}
+localStorage.setItem("page",JSON.stringify(obj));
+window.location.href="./processing.html";
+}
+
+// ------------------linking of login page to the index page----------//
+
+document.querySelector("#login_bar").addEventListener("click",function(){
+  window.location.href="login.html"
+})
+
+let login_data;
+if(localStorage.getItem("loginUser")==null){
+  login_data=[];
+}else{
+  login_data = JSON.parse(localStorage.getItem("loginUser"));
+
+}
+let loginUserName = document.getElementById("login_bar")
+if(login_data!=null){
+  loginUserName.innerText=login_data[login_data.length-1].Email
+}
+console.log(login_data)
 </script>

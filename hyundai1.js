@@ -1,4 +1,3 @@
-// -----------------------------faq1-------------------------------------------------------------------------------
 let p = 1
 function faq1() {
 
@@ -229,3 +228,31 @@ function cityname()
    let name=document.getElementById("selectcity").value;
    document.getElementById("heading").innerText=`Hyundai Cars Subscription in ${name}`
 }
+
+function callmelogin() {
+   event.preventDefault();
+   let obj = {
+     pageName : "./login.html"
+ }
+ localStorage.setItem("page",JSON.stringify(obj));
+ window.location.href="./processing.html";
+ }
+
+ // ------------------linking of login page to the index page----------//
+
+document.querySelector("#login_bar").addEventListener("click",function(){
+   window.location.href="login.html"
+ })
+ 
+ let login_data;
+ if(localStorage.getItem("loginUser")==null){
+   login_data=[];
+ }else{
+   login_data = JSON.parse(localStorage.getItem("loginUser"));
+ 
+ }
+ let loginUserName = document.getElementById("login_bar")
+ if(login_data!=null){
+   loginUserName.innerText=login_data[login_data.length-1].Email
+ }
+ console.log(login_data)

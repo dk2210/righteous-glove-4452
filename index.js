@@ -362,3 +362,60 @@ cont.append(div,div9,div6,div67)
 
 })
 // fifth is done 
+
+
+// page directiing
+function callmehyundai(){
+  event.preventDefault();
+  let obj = {
+    pageName : "./hyundai1.html"
+}
+localStorage.setItem("page",JSON.stringify(obj));
+window.location.href="./processing.html";
+}
+
+function callmemahindra(){
+  event.preventDefault();
+  let obj = {
+    pageName : "./mahindra1.html"
+}
+localStorage.setItem("page",JSON.stringify(obj));
+window.location.href="./processing.html";
+}
+
+function callmefaq() {
+  event.preventDefault();
+  let obj = {
+    pageName : "./faq.html"
+}
+localStorage.setItem("page",JSON.stringify(obj));
+window.location.href="./processing.html";
+}
+
+function callmelogin() {
+  event.preventDefault();
+  let obj = {
+    pageName : "./login.html"
+}
+localStorage.setItem("page",JSON.stringify(obj));
+window.location.href="./processing.html";
+}
+
+// ------------------linking of login page to the index page----------//
+
+document.querySelector("#login_bar").addEventListener("click",function(){
+  window.location.href="login.html"
+})
+
+let login_data;
+if(localStorage.getItem("loginUser")==null){
+  login_data=[];
+}else{
+  login_data = JSON.parse(localStorage.getItem("loginUser"));
+
+}
+let loginUserName = document.getElementById("login_bar")
+if(login_data!=null){
+  loginUserName.innerText=login_data[login_data.length-1].Email
+}
+console.log(login_data)

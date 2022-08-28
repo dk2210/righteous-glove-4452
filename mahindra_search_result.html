@@ -11,6 +11,53 @@
         body {
         font-family: 'Poppins'
         }
+        /* navbar */
+        .navbar_sticky {
+            position:sticky;
+            top: 0;
+            background-color: white;
+            z-index: 2;
+        }
+        #navbar1{
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            background-color: white;
+        }
+        #navbar1>div+div{
+            display: flex;
+            justify-content: space-evenly;
+            margin-right: 10px;
+            width: 700px;
+            padding-top: 10px;
+        }
+        #navbar1>div{
+            margin-left: 100px    
+        }
+        .border{
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            margin-bottom: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 5px;   
+        }  
+        #sanitised{
+            margin-top: -13px;
+            font-size: 13px;
+            margin-left:22px
+        }
+        .border:hover,.nav_color:hover{
+            color: teal;
+            cursor: pointer;
+        }
+        .nav_color{
+            padding-top: 5px;
+        }
+        #exit_Log{
+            margin-right: -25px;
+            margin-top: 4px;
+        }
         /* displaying both things */
         #display{
             display: flex;
@@ -247,6 +294,36 @@
     </style>
 </head>
 <body>
+    <!-- navbar -->
+    <section class="navbar_sticky">
+        <div id="navbar1">
+          <div>
+            <div>
+              <img
+                src="https://www.revv.co.in/grapheneImages/newopen/logo.svg"
+                alt="No internet connection"
+              />
+              <div id="sanitised">sanitised,safe</div>
+            </div>
+          </div>
+          <div>
+            <!-- <div id="b_1" class="border"> <a style="text-decoration: none; color: black;" href="hyundai1.html"><b> Hyundai</b> Subscription</a></div>
+            <div class="border"> <a style="text-decoration: none; color: black;" href="hyundai2.html"><b>Mahindra</b> Subscription</a>   </div>
+            <div class="nav_color"><a style="text-decoration: none; color: black;" href="faq.html">FAQs</a> </div> -->
+            <div class="border" onclick="callmehyundai()"><b> Hyundai</b> Subscription</div>
+            <div class="border" onclick="callmemahindra()"> <b>Mahindra</b> Subscription</div>
+            <div class="nav_color" onclick="callmefaq()">FAQs</div>
+            
+            <div id="exit_Log">
+              <img
+                src="	https://www.revv.co.in/grapheneImages/newopen/ic-web-profile-login.svg"
+                alt="error"
+              />
+            </div>
+            <div id="login_bar" class="nav_color" onclick="callmelogin()">Login or Signup</div>
+          </div>
+        </div>
+      </section>
     <div id="display">
         <div id="sidebar">
             <h4 id="filtertag">Filter By</h4>
@@ -612,6 +689,62 @@
         }
         localStorage.setItem("page",JSON.stringify(obj));
         window.location.href="./processing.html";
-
     }
+
+    
+// page directiing
+function callmehyundai(){
+  event.preventDefault();
+  let obj = {
+    pageName : "./hyundai1.html"
+}
+localStorage.setItem("page",JSON.stringify(obj));
+window.location.href="./processing.html";
+}
+
+function callmemahindra(){
+  event.preventDefault();
+  let obj = {
+    pageName : "./mahindra1.html"
+}
+localStorage.setItem("page",JSON.stringify(obj));
+window.location.href="./processing.html";
+}
+
+function callmefaq() {
+  event.preventDefault();
+  let obj = {
+    pageName : "./faq.html"
+}
+localStorage.setItem("page",JSON.stringify(obj));
+window.location.href="./processing.html";
+}
+
+function callmelogin() {
+  event.preventDefault();
+  let obj = {
+    pageName : "./login.html"
+}
+localStorage.setItem("page",JSON.stringify(obj));
+window.location.href="./processing.html";
+}
+
+// ------------------linking of login page to the index page----------//
+
+document.querySelector("#login_bar").addEventListener("click",function(){
+  window.location.href="login.html"
+})
+
+let login_data;
+if(localStorage.getItem("loginUser")==null){
+  login_data=[];
+}else{
+  login_data = JSON.parse(localStorage.getItem("loginUser"));
+
+}
+let loginUserName = document.getElementById("login_bar")
+if(login_data!=null){
+  loginUserName.innerText=login_data[login_data.length-1].Email
+}
+console.log(login_data)
 </script>

@@ -5,9 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/df4f524a0b.js" crossorigin="anonymous"></script>
 </head>
 <style>
- #rental{
+         body {
+            font-family: 'Poppins';
+            background-color: whitesmoke;
+        }
+        #rental{
             width: 35%;
             margin-left: 10%;
             text-align: center;
@@ -160,12 +166,15 @@
         #slt{
             margin-left: 50%;
         }
-        #cont_6 {
-            border: 1px solid black;
+         /* cont_6 */
+         #cont_6 {
             height: 80vh;
             display: flex;
             gap: 20px;
             justify-content:space-evenly;
+            border: 1px solid rgb(243, 243, 243);
+            margin-top: 1%;
+            border-radius: 10px;
         }
         #cont_6 > div:first-child {
             width: 25%;
@@ -319,35 +328,40 @@
      height: 5vh;
      background-color: white;
  }
+ .navbar_sticky {
+    position:sticky;
+    top: 0;
+    z-index: 2;
+        }
 </style>
 <link rel="stylesheet" href="homepage2.css">
 <body>
-    <div id="navbar1">
-        <div>
-          <div>
-            <img
-              src="https://www.revv.co.in/grapheneImages/newopen/logo.svg"
-              alt="No internet connection"
-            />
-            <div id="sanitised">sanitised,safe</div>
+    <section class="navbar_sticky">
+        <div id="navbar1">
+            <div>
+              <div>
+                <img
+                  src="https://www.revv.co.in/grapheneImages/newopen/logo.svg"
+                  alt="No internet connection"
+                />
+                <div id="sanitised">sanitised,safe</div>
+              </div>
+            </div>
+            <div>
+                <div class="border" onclick="callmehyundai()"><b> Hyundai</b> Subscription</div>
+              <div class="nav_color" >How it works</div>
+              <div class="nav_color">Subscribe vs Buy</div>
+            <div class="nav_color" onclick="callmefaq()">FAQs</div>
+              <div id="exit_Log">
+                <img
+                  src="	https://www.revv.co.in/grapheneImages/newopen/ic-web-profile-login.svg"
+                  alt="error"
+                />
+              </div>
+              <div id="login_bar" class="nav_color" onclick="callmelogin()">Login or Signup</div>
+            </div>
           </div>
-        </div>
-        <div>
-          <div class="border"><b>Hyundai</b> Subscription</div>
-          <div class="border"><b>Mahindra</b> Subscription</div>
-          <div class="nav_color" >How it works</div>
-          <div class="nav_color">Subscribe vs Buy
-        </div>
-          <div class="nav_color" >FAQs</div>
-          <div id="exit_Log">
-            <img
-              src="	https://www.revv.co.in/grapheneImages/newopen/ic-web-profile-login.svg"
-              alt="error"
-            />
-          </div>
-          <div class="nav_color">Login or Signup</div>
-        </div>
-      </div>
+    </section>
       <!-- navbar completed -->
       <div id="first_part">
         <div id="main">

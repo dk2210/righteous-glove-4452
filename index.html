@@ -146,32 +146,42 @@
             color: white
             
         }
-       
+        .navbar_sticky {
+        position:sticky;
+        top: 0;
+        z-index: 2;
+        }
   </style>
   <body>
-    <div id="navbar1">
-      <div>
+    <section class="navbar_sticky">
+      <div id="navbar1">
         <div>
-          <img
-            src="https://www.revv.co.in/grapheneImages/newopen/logo.svg"
-            alt="No internet connection"
-          />
-          <div id="sanitised">sanitised,safe</div>
+          <div>
+            <img
+              src="https://www.revv.co.in/grapheneImages/newopen/logo.svg"
+              alt="No internet connection"
+            />
+            <div id="sanitised">sanitised,safe</div>
+          </div>
+        </div>
+        <div>
+          <!-- <div id="b_1" class="border"> <a style="text-decoration: none; color: black;" href="hyundai1.html"><b> Hyundai</b> Subscription</a></div>
+          <div class="border"> <a style="text-decoration: none; color: black;" href="hyundai2.html"><b>Mahindra</b> Subscription</a>   </div>
+          <div class="nav_color"><a style="text-decoration: none; color: black;" href="faq.html">FAQs</a> </div> -->
+          <div class="border" onclick="callmehyundai()"><b> Hyundai</b> Subscription</div>
+          <div class="border" onclick="callmemahindra()"> <b>Mahindra</b> Subscription</div>
+          <div class="nav_color" onclick="callmefaq()">FAQs</div>
+          
+          <div id="exit_Log">
+            <img
+              src="	https://www.revv.co.in/grapheneImages/newopen/ic-web-profile-login.svg"
+              alt="error"
+            />
+          </div>
+          <div id="login_bar" class="nav_color" onclick="callmelogin()">Login or Signup</div>
         </div>
       </div>
-      <div>
-        <div  class="border"> <a style="text-decoration: none; color: black;" href="hyundai1.html"><b> Hyundai</b> Subscription</a></div>
-        <div class="border"> <a style="text-decoration: none; color: black;" href="hyundai2.html"><b>Mahindra</b> Subscription</a>   </div>
-        <div class="nav_color"><a style="text-decoration: none; color: black;" href="faq.html">FAQs</a> </div>
-        <div id="exit_Log">
-          <img
-            src="	https://www.revv.co.in/grapheneImages/newopen/ic-web-profile-login.svg"
-            alt="error"
-          />
-        </div>
-        <div class="nav_color"><a style="text-decoration: none; color: black;" href="signup.html"> Login or Signup</a></div>
-      </div>
-    </div>
+    </section>
     <!-- navbar here -->
 
     <div id="first_part">

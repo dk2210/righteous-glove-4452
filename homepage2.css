@@ -4,8 +4,6 @@
     box-sizing: border-box;
     
 }
-
-
 body {
     font-family: 'Poppins';
     background-color: 
@@ -36,6 +34,7 @@ body {
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px;
+    cursor: pointer;
 }
 
 #sanitised{
@@ -44,7 +43,7 @@ body {
     margin-left:22px
 }
 .border:hover,.nav_color:hover{
-    color: aqua;
+   color:teal
 }
 .nav_color{
     padding-top: 5px;

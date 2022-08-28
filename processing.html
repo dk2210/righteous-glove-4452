@@ -94,7 +94,7 @@
                 <div class="border"><b>Mahindra</b> Subscription</div>
                 <div class="nav_color">FAQs</div>
                 <div id="exit_Log"><img src="	https://www.revv.co.in/grapheneImages/newopen/ic-web-profile-login.svg" alt="error"></div>
-                <div class="nav_color">Login or Signup</div>
+                <div id="login_bar" class="nav_color">Login or Signup</div>
             </div>
         </div>
 
@@ -120,4 +120,22 @@
         },3000)
     }
 
+// ------------------linking of login page to the index page----------//
+
+document.querySelector("#login_bar").addEventListener("click",function(){
+  window.location.href="login.html"
+})
+
+let login_data;
+if(localStorage.getItem("loginUser")==null){
+  login_data=[];
+}else{
+  login_data = JSON.parse(localStorage.getItem("loginUser"));
+
+}
+let loginUserName = document.getElementById("login_bar")
+if(login_data!=null){
+  loginUserName.innerText=login_data[login_data.length-1].Email
+}
+console.log(login_data)
 </script>

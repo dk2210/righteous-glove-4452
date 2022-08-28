@@ -17,6 +17,7 @@
     justify-content: space-between;
     padding: 5px;
     position: sticky;
+    background-color: white;
     top: 1px
 }
 #navbar1>div+div{
@@ -43,7 +44,8 @@
     margin-left:22px
 }
 .border:hover,.nav_color:hover{
-    color: aqua;
+    color: teal;
+    cursor: pointer;
 }
 .nav_color{
     padding-top: 5px;
@@ -68,19 +70,17 @@
     right: 60px;
     border-radius: 90%;
     padding: .5%;
-
   }
  
   #imagesOfHome img{
-width:40%;
-margin-left: 50%;
-height:auto;
-padding-top: 10%;
+    width:40%;
+    margin-left: 50%;
+    height:auto;
+    padding-top: 10%;
 
   }
   #imagesOfHome >div{
     height: 70%;
-  
     height: 580px
   }
   /* first is completed */

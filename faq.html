@@ -1,129 +1,1540 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-      body{
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-      }  
-      #container{
-        width: 100%;
-        height: auto;
-        display:flex ;
-      }
-      #sideMain{
-        width: 25%;
-        height: auto;
-        text-align: center;
-      }
-      #MainBody{
-        width: 75%;
-        height: auto;
-      }
-      #sideMain>div{
-        background-color: #f1f1f1;
-        margin: 2px;
-        padding: 13px;
-      }
-      .box{
-        font-size: 22px;
-        color: #5f7086;
-        font-weight: bolder;
-      }
-      .box>div:nth-child(2){
-        color: #0ebaba;
-        font-size: 16px;
-        float: right;
-      }
-      .body{
-        margin-top: 8px ;
-      }
-      .body>div{
-        background-color: #f1f1f1;
-        margin: 6px;
-        margin-top: 20px;
-        padding: 20px;
-        font-weight: bold;
 
-      }
-      
-    </style>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self Driving Car Rental Frequently Asked Questions (FAQ's)-Revv</title>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="shortcut icon" href="https://www.revv.co.in/grapheneImages/newopen/logo.svg" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins';
+      box-sizing: border-box;
+    }
+
+    /* navbar */
+    .navbar_sticky {
+            position:sticky;
+            top: 0;
+            background-color: white;
+            z-index: 2;
+        }
+        #navbar1{
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            background-color: white;
+        }
+        #navbar1>div+div{
+            display: flex;
+            justify-content: space-evenly;
+            margin-right: 10px;
+            width: 700px;
+            padding-top: 10px;
+        }
+        #navbar1>div{
+            margin-left: 100px    
+        }
+        .border{
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            margin-bottom: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 5px;   
+        }  
+        #sanitised{
+            margin-top: -13px;
+            font-size: 13px;
+            margin-left:22px
+        }
+        .border:hover,.nav_color:hover{
+            color: teal;
+            cursor: pointer;
+        }
+        .nav_color{
+            padding-top: 5px;
+        }
+        #exit_Log{
+            margin-right: -25px;
+            margin-top: 4px;
+        }
+        /* main_body */
+    #container {
+      width: 100%;
+      /* position:sticky; */
+
+    }
+
+    #sideMain {
+      position: absolute;
+      width: 25%;
+      text-align: center;
+      margin-top: 30px;
+      top: 50px;
+    }
+
+    #MainBody {
+      width: 72%;
+      margin-left: 26.8%;
+    }
+
+    #sideMain>div {
+      background-color: #f1f1f1;
+      margin: 2px;
+      padding: 13px;
+    }
+
+    .box {
+      font-size: 20px;
+      color: #5f7086;
+      font-weight: bolder;
+    }
+
+    .box>div:nth-child(2) {
+      color: #0ebaba;
+      font-size: 15px;
+      margin-bottom: -2%;
+      margin-left: 86%;
+
+    }
+
+    .body {
+      margin-top: 20px;
+    }
+
+    .body>div {
+      width: 90%;
+      background-color: #f1f1f1;
+      margin: 6px;
+      margin-top: 20px;
+      padding: 20px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    p {
+
+      margin-left: 0.7%;
+      padding: 2px;
+      width: 90%;
+      color: rgb(156, 156, 156);
+      font-size: 13px;
+      letter-spacing: 0.5px;
+
+    }
+
+    #sideMain {
+      font-size: 13px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+
+    #footer {
+      display: flex;
+      gap: 5%;
+      font-size: 16px;
+      padding: 4%;
+      background-color: pink;
+      background-color: rgb(42, 43, 54);
+      margin-top: -2;
+      z-index: 1;
+      position: relative;
+      opacity: 0.9;
+    }
+
+    #footer ul>li {
+
+      width: 120%;
+      padding: 2%;
+      color: rgb(146, 147, 152);
+    }
+
+    #footer ul>li:hover {
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+    }
+
+    #footer h3 {
+      color: rgb(255, 255, 255);
+    }
+
+
+    #service {
+      border-radius: 10px;
+      color: white;
+      background-color: #656c80;
+      padding-top: 5px;
+      padding-bottom: 2%;
+      height: 300px;
+      width: 100%;
+    }
+
+    #service>p {
+      font-size: 25px;
+      color: white;
+      font-weight: bold;
+      width: 40%;
+      margin-left: 150px;
+    }
+
+    #service>div {
+      display: flex;
+      width: 80%;
+      margin: auto;
+      gap: 15%;
+      line-height: 20px;
+      font-size: 14px;
+    }
+
+    #service>div>div {
+      width: 20%;
+    }
+
+    #service>div>div:nth-child(1) {
+      line-height: 8px;
+    }
+
+    #service>div>div:nth-child(2) {
+      line-height: 8px;
+    }
+
+    #service>div>div:nth-child(3) {
+      line-height: 8px;
+    }
+
+    #service>div>div p:hover {
+      color: white
+    }
+
+    #contact {
+      width: 100%;
+      height: 300px;
+      display: flex;
+      background-color: rgb(42, 43, 54);
+      box-sizing: border-box;
+    }
+
+    #contact1 {
+      width: 50%;
+      height: 100%;
+      margin-left: 70px;
+
+    }
+
+    #contactlogo {
+      width: 20%;
+      height: 20%;
+      padding-top: 80px;
+      padding-left: 100px;
+      display: block;
+    }
+
+    #twitterlogo {
+      height: 14%;
+      border-radius: 50%;
+      margin-left: 120px;
+    }
+
+    #facebooklogo {
+      height: 14%;
+      border-radius: 50%;
+    }
+
+    #contact1>p {
+      padding-top: 40px;
+      padding-left: 110px;
+    }
+
+    #contact>div:nth-child(2) {
+      width: 50%;
+      margin-left: 30%;
+      padding-top: 40px;
+    }
+
+    .white {
+      color: white;
+    }
+
+    .blue {
+      color: #1caba2;
+    }
+  </style>
 </head>
+
 <body>
-    <div id="container">
-        <div id="sideMain">
-            <div> About Revv</div>
-            <div>Your Booking</div>
-            <div>Payments & Refunds</div>
-            <div>Your Trip</div>
-           </div>
-        <div id="MainBody">
-            <div class="box">
-                <div>ABOUT REVV</div>
-                <div>EXPAND ALL</div>
-            </div>
-            <div class="body">
-                <div>What is Revv?</div>
-                <div>Am I eligible to use Revv's services?</div>
-                <div>Which are the areas where I can avail Revv's services?</div>
-                <div>Is there a "Kilometres limit" to how much I can drive?</div>
-                <div>Are there restrictions on where I can travel?</div>
-                <div>Do I have to bring the car back to the same location?</div>
-                <div>Can I book a one-way trip?</div>
-                <div>Can I book for any duration of time?</div>
-                <div>What is Peak Season? Are the prices different during Peak Season?</div>
-                <div>What kind of cars can I choose from?</div>
-                <div>In the event of an accident or damage to the vehicle, what is my maximum liability?</div>
-                <div>Is Revv 24/7?</div>
-                <div>Can I take a pet along with me?</div>
-                <div>Is there any speed limit?</div>
-            </div>
-            <div class="box">
-                <div>YOUR BOOKINGS</div>
-                <div>EXPAND ALL</div>
-            </div>
-            <div class="body">
-            <div>How do I make a booking?</div>
-            <div>What if I need to modify or cancel my booking?</div>
-            <div>What happens if I return the car late?</div>
-            <div>If I return the car before the scheduled end time of my booking, do I get any refunds?</div>
-            <div>What all is included in my booking?</div>
-            <div>Is fuel included in my booking?</div>
-            <div>Can I club two discount vouchers?</div>
-            <div>Can I create a booking with Revv if I have international DL?</div>
-            </div>
-            <div class="box">
-                <div>PAYMENTS & REFUNDS</div>
-                <div>EXPAND ALL</div>
-                </div>
-                <div class="body">
-                    <div>What modes of payments are accepted?</div>
-                    <div>Do I get any reimbursement for the fuel I fill in my Revv car?</div>
-                    <div>Who pays for parking and tolls/inter-state entry taxes?</div>
-                    <div>Do I need to pay the fines incurred during my booking, due to parking/traffic violations?</div>
-                    <div>How much time does it take to get my refund back?</div>
-                </div>
-                <div class="box">
-                    <div>YOUR TRIP</div>
-                    <div>EXPAND ALL</div>
-                </div>
-                <div class="body">
-                    <div>What documents do I need to take the delivery of my Revv car?</div>
-                    <div>How do I check-in for my booking?</div>
-                    <div>What do I do if the vehicle breaks down or if I meet with an accident?</div>
-                    <div>How do I check-out from my booking?</div>
-                    <div>What are the requirements when I drive across a State border?</div>
-                    <div>What is the amount that I must pay at a State border crossing?</div>
-                    <div>What do I do if a border officer at the State RTO crossing is causing a problem?</div>
-                    <div>What if I leave something in Revv's car?</div>
-                </div>
-            </div>
+
+  <section class="navbar_sticky">
+    <div id="navbar1">
+      <div>
+        <div>
+          <img
+            src="https://www.revv.co.in/grapheneImages/newopen/logo.svg"
+            alt="No internet connection"
+          />
+          <div id="sanitised">sanitised,safe</div>
         </div>
-    </div> 
+      </div>
+      <div>
+        <!-- <div id="b_1" class="border"> <a style="text-decoration: none; color: black;" href="hyundai1.html"><b> Hyundai</b> Subscription</a></div>
+        <div class="border"> <a style="text-decoration: none; color: black;" href="hyundai2.html"><b>Mahindra</b> Subscription</a>   </div>
+        <div class="nav_color"><a style="text-decoration: none; color: black;" href="faq.html">FAQs</a> </div> -->
+        <div class="border" onclick="callmehyundai()"><b> Hyundai</b> Subscription</div>
+        <div class="border" onclick="callmemahindra()"> <b>Mahindra</b> Subscription</div>
+        <div class="nav_color" onclick="callmefaq()">FAQs</div>
+        
+        <div id="exit_Log">
+          <img
+            src="	https://www.revv.co.in/grapheneImages/newopen/ic-web-profile-login.svg"
+            alt="error"
+          />
+        </div>
+        <div id="login_bar" class="nav_color" onclick="callmelogin()">Login or Signup</div>
+      </div>
+    </div>
+  </section>
+
+  <div id="container">
+    <div id="sideMain">
+      <div> <a href="#aboutrevv">About Revv</a> </div>
+      <div><a href="#booking">Your Booking</a></div>
+      <div><a href="#payments">Payments & Refunds</a></div>
+      <div> <a href="#yourtrip">Your Trip</a></div>
+    </div>
+    <div id="MainBody">
+      <div class="box">
+        <div id="aboutrevv">ABOUT REVV</div>
+        <div id="expand1" onclick="expandall1()">EXPAND ALL</div>
+      </div>
+      <div class="body">
+        <div onclick="faq1()">What is Revv?</div>
+        <p id="1"></p>
+        <div onclick="faq2()">Am I eligible to use Revv's services?</div>
+        <p id="2"></p>
+        <div onclick="faq3()">Which are the areas where I can avail Revv's services?</div>
+        <p id="3"></p>
+
+        <div onclick="faq4()">Is there a "Kilometres limit" to how much I can drive?</div>
+        <p id="4"></p>
+        <div onclick="faq5()">Are there restrictions on where I can travel?</div>
+        <p id="5"></p>
+        <div onclick="faq6()">Do I have to bring the car back to the same location?</div>
+        <p id="6"></p>
+        <div onclick="faq7()">Can I book a one-way trip?</div>
+        <p id="7"></p>
+        <div onclick="faq8()">Can I book for any duration of time?</div>
+        <p id="8"></p>
+        <div onclick="faq9()">What is Peak Season? Are the prices different during Peak Season?</div>
+        <p id="9"></p>
+        <div onclick="faq10()">What kind of cars can I choose from?</div>
+        <p id="10"></p>
+        <div onclick="faq11()">In the event of an accident or damage to the vehicle, what is my maximum liability?</div>
+        <p id="11"></p>
+        <div onclick="faq12()">Is Revv 24/7?</div>
+        <p id="12"></p>
+        <div onclick="faq13()">Can I take a pet along with me?</div>
+        <p id="13"></p>
+        <div onclick="faq14()">Is there any speed limit?</div>
+        <p id="14"></p>
+      </div>
+      <div class="box">
+        <div id="booking">YOUR BOOKINGS</div>
+        <div id="expand2" onclick="expandall2()">EXPAND ALL</div>
+      </div>
+      <div class="body">
+        <div onclick="faq21()">How do I make a booking?</div>
+        <p id="21"></p>
+        <div onclick="faq22()">What if I need to modify or cancel my booking?</div>
+        <p id="22"></p>
+        <div onclick="faq23()">What happens if I return the car late?</div>
+        <p id="23"></p>
+        <div onclick="faq24()">If I return the car before the scheduled end time of my booking, do I get any refunds?
+        </div>
+        <p id="24"></p>
+        <div onclick="faq25()">What all is included in my booking?</div>
+        <p id="25"></p>
+        <div onclick="faq26()">Is fuel included in my booking?</div>
+        <p id="26"></p>
+        <div onclick="faq27()">Can I club two discount vouchers?</div>
+        <p id="27"></p>
+        <div onclick="faq28()">Can I create a booking with Revv if I have international DL?</div>
+        <p id="28"></p>
+      </div>
+      <div class="box">
+        <div id="payments">PAYMENTS & REFUNDS</div>
+        <div id="expand3" onclick="expandall3()">EXPAND ALL</div>
+      </div>
+      <div class="body">
+        <div onclick="faq31()">What modes of payments are accepted?</div>
+        <p id="31"></p>
+        <div onclick="faq32()">Do I get any reimbursement for the fuel I fill in my Revv car?</div>
+        <p id="32"></p>
+        <div onclick="faq33()">Who pays for parking and tolls/inter-state entry taxes?</div>
+        <p id="33"></p>
+        <div onclick="faq34()">Do I need to pay the fines incurred during my booking, due to parking/traffic violations?
+        </div>
+        <p id="34"></p>
+        <div onclick="faq35()">How much time does it take to get my refund back?</div>
+        <p id="35"></p>
+      </div>
+      <div class="box">
+        <div id="yourtrip">YOUR TRIP</div>
+        <div id="expand4" onclick="expandall4()">EXPAND ALL</div>
+      </div>
+      <div class="body">
+        <div onclick="faq41()">What documents do I need to take the delivery of my Revv car?</div>
+        <p id="41"></p>
+        <div onclick="faq42()">How do I check-in for my booking?</div>
+        <p id="42"></p>
+        <div onclick="faq43()">What do I do if the vehicle breaks down or if I meet with an accident?</div>
+        <p id="43"></p>
+        <div onclick="faq44()">How do I check-out from my booking?</div>
+        <p id="44"></p>
+        <div onclick="faq45()">What are the requirements when I drive across a State border?</div>
+        <p id="45"></p>
+        <div onclick="faq46()">What is the amount that I must pay at a State border crossing?</div>
+        <p id="46"></p>
+        <div onclick="faq47()">What do I do if a border officer at the State RTO crossing is causing a problem?</div>
+        <p id=47></p>
+        <div onclick="faq48()">What if I leave something in Revv's car?</div>
+        <p id="48"> </p>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+  <!-- -------------------------------------------------footer---------------------------------------------------- -->
+
+  <div id="service" style="width: 100%;">
+    <p>Serviceable cities</p>
+    <div>
+      <div>
+        <p>Car Rental in Bangalore</p>
+        <p>Car Rental in Mumbai</p>
+        <p>Car Rental in Delhi-NCR</p>
+        <p>Car Rental in Chennai</p>
+        <p>Car Rental in Pune</p>
+        <p>Car Rental in Kolkata</p>
+        <p>Car Rental in Ahmedabad</p>
+      </div>
+      <div>
+        <p>Car Rental in Bhubaneswar</p>
+        <p>Car Rental in Chandigarh</p>
+        <p>Car Rental in Coimbatore</p>
+        <p>Car Rental in Jaipur</p>
+        <p>Car Rental in Kochi</p>
+        <p>Car Rental in Mangalore</p>
+        <p>Car Rental in Mysore</p>
+        <p>Car Rental in Nagpur</p>
+      </div>
+      <div>
+        <p>Car Rental in Surat</p>
+        <p>Car Rental in Tirupati</p>
+        <p>Car Rental in Trivandrum</p>
+        <p>Car Rental in Vadodara</p>
+        <p>Car Rental in Vijayawada</p>
+        <p>Car Rental in Vizag</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- --------------------------------------------CONTACT SECTION------------------------------------------ -->
+
+  <div id="contact">
+
+    <div id="contact1">
+      <img src="https://www.revv.co.in/grapheneImages/newopen/logo.svg" alt="logo" id="contactlogo">
+      <img src="https://i.pinimg.com/736x/26/8b/5a/268b5acd19532a32e1520ba11f9281b4.jpg" alt="" id="twitterlogo">
+      <img src="https://i.pinimg.com/originals/89/0b/fe/890bfe7a908d4551d8eaec4b9c2d5945.png" alt="" id="facebooklogo">
+      <p>© 2022 Primemover Mobility Technologies Pvt Ltd. All rights reserved</p>
+    </div>
+
+
+    <div>
+      <h2 class="white">
+        Have Questions?
+      </h2>
+      <h2 class="blue">+91-8929655141</h2>
+      <h3 class="white">24/7 Customer Support</h3>
+      <h2 class="blue">care@revv.co.in</h2>
+    </div>
+
+  </div>
 </body>
+
 </html>
+<script>
+
+
+
+
+  let a = 1
+  function faq1() {
+
+
+    if (a == 1) {
+      let x = document.getElementById("1");
+      x.innerText = "Revv is a self drive car rental service that provides you with all the privacy, fun and convenience of your own car, without the hassles of owning and maintaining one. We drop and pick-up cars from your doorstep, so that you can spend time on the more important thing - your drive! The doorstep drop and pick-up of cars is our standard way of serving you, and is available throughout the areas served by us."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      a = 2;
+    }
+    else {
+      let x = document.getElementById("1");
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      a = 1;
+    }
+
+  }
+
+
+  let b = 1
+  function faq2() {
+    if (b == 1) {
+      let x = document.getElementById("2")
+      x.innerText = "To avail Revv's services, you must be at least 21 years old, and your driving license for  Light Motor Vehicles must be at least 1 year old (at the time of starting the trip). Driving license printed on A4 sheet of paper (original or otherwise), driving license on Digilocker or M-Parivaahan app and commercial driving licenses will not be accepted."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      b = 2;
+    }
+    else {
+      let x = document.getElementById("2")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      b = 1;
+    }
+
+  }
+
+
+  let c = 1
+  function faq3() {
+    if (c == 1) {
+      let x = document.getElementById("3");
+
+      x.innerText = "We are currently serving in Bangalore, Hyderabad, Chennai, Mumbai, Pune, Delhi NCR, Chandigarh, Jaipur, Visakhapatnam, Mysore, Coimbatore, Mangalore, Kolkata, Kochi, Ahmedabad, Trivandrum, Surat, Tirupati , Vijayawada, Bhubaneswar, Nagpur & Vadodara.Delhi NCR : We are covering most parts of Delhi & Gurgaon and some parts of Noida & Ghaziabad.Hyderabad, Bangalore, Mumbai, Pune, Jaipur, Chennai, Visakhapatnam, Mangalore, Kolkata, Kochi, Ahmedabad, Trivandrum, Surat, Tirupati, Vijayawada, Bhubaneswar, Nagpur & Vadodara : We serve the main city and the airport area."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      c = 2;
+    }
+    else {
+      let x = document.getElementById("3")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      c = 1;
+    }
+
+  }
+
+
+  let d = 1
+  function faq4() {
+    if (d == 1) {
+      let x = document.getElementById("4")
+      x.innerText = `This depends on the pricing plan that you select. If you go for the “Unlimited kms” pricing plans (available only without fuel, and only for bookings whose duration is more than 24 hours), there is absolutely no limit to the kilometres that you can drive, and you have complete flexibility of driving the car as much as you want. Revv it up! Other pricing plans have a "Kilometres limit" , which varies based on the plan selected. You can still drive beyond the kilometres limit, but the additional kilometres clocked will attract an additional charge.`
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      d = 2;
+    }
+    else {
+      let x = document.getElementById("4")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      d = 1;
+    }
+
+  }
+
+  let e = 1
+  function faq5() {
+    if (e == 1) {
+      let x = document.getElementById("5")
+      x.innerText = "All of our cars are equipped with an All India Tourist Permit, so you are free to drive anywhere in the country. All India Tourist Permit means that the car is legally permitted to ply in any state in the country, after paying the inter-state taxes at the state borders. However, we do not permit taking Revv vehicles to Leh/Ladakh region, Kaza/Nako region and spiti valley. We also advise you to avoid bad terrains (especially in non- SUV cars) and areas affected by civil unrest .Please note: Interstate taxes at the state borders are to be paid and borne by the customer. Our cars are equipped with Fast tag devices for your convenience. The toll charges incurred during your trip will be billed to you in your invoice."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      e = 2;
+    }
+    else {
+      let x = document.getElementById("5")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      e = 1;
+    }
+
+  }
+
+  let f = 1
+  function faq6() {
+    if (f == 1) {
+      let x = document.getElementById("6")
+      x.innerText = "No, you can choose different delivery and pickup locations within the same city, without any extra cost other than the standard delivery/pickup charges. However, this option needs to be availed while creating of the booking, before it is confirmed. You may also modify the booking later, however, it will then attract applicable modification charges."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      f = 2;
+    }
+    else {
+      let x = document.getElementById("6")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      f = 1;
+    }
+
+  }
+
+  let g = 1
+  function faq7() {
+    if (g == 1) {
+      let x = document.getElementById("7")
+      x.innerText = "Yes, you can choose different delivery and pickup locations within the same city, without any extra cost other than the standard delivery/pickup charges. However, this option needs to be availed while creating of the booking, before it is confirmed. You may also modify the booking later, however, it will then attract applicable modification charges."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      g = 2;
+    }
+    else {
+      let x = document.getElementById("7")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      g = 1;
+    }
+
+  }
+
+
+  let h = 1
+  function faq8() {
+    if (h == 1) {
+      let x = document.getElementById("8")
+      x.innerText = "For rentals, the minimum booking duration is 10 hours, and the maximum is upto 90 days.If you need a car for longer period of time, please try Revv subscriptions, wherein you can subscribe to a car for minimum of 1 month and maximum of 36 months. Check out our subscriptions page for more details."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      h = 2;
+    }
+    else {
+      let x = document.getElementById("8")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      h = 1;
+    }
+
+  }
+
+  let i = 1
+  function faq9() {
+    if (i == 1) {
+      let x = document.getElementById("9")
+      x.innerText = "Peak season refers to festive periods of very high demand. Our hourly rental tariffs are different for weekdays (Mon-Fri), weekends (Sat-Sun) and the Peak Season. The dates and prices for the Peak Season are dynamically decided based on the demand."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      i = 2;
+    }
+    else {
+      let x = document.getElementById("9")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      i = 1;
+    }
+
+  }
+
+  let j = 1
+  function faq10() {
+    if (j == 1) {
+      let x = document.getElementById("10")
+      x.innerText = "We have a curated selection of cars, which includes block-buster models across segments such as SUVs, ultra-luxury cars, hatchbacks and sedans. We are constantly increasing our portfolio; so keep a close watch for your favourite car, just in case we don’t have it already."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      j = 2;
+    }
+    else {
+      let x = document.getElementById("10")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      j = 1;
+    }
+
+  }
+
+
+  let k = 1
+  function faq11() {
+    if (k == 1) {
+      let x = document.getElementById("11")
+      x.innerText = "In the event of damages, your liability is limited to a maximum of Rs 10000. You will need to pay Damage Fee equivalent to the repair cost (as estimated by an authorized dealership) and downtime losses, upto a maximum of Rs 10000. This is independent of the nature and terms of the insurance cover that Revv has on the cars.Please note that the maximum liability policy is intended to benefit and protect the responsible user. In situations of irresponsible or unsafe or negligent usage, there could be discretionary exceptions to this policy, whereby the user could be liable for all damages irrespective of whether or not Revv is able to claim insurance in such cases"
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      k = 2;
+    }
+    else {
+      let x = document.getElementById("11")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      k = 1;
+    }
+
+  }
+
+
+  let l = 1
+  function faq12() {
+    if (l == 1) {
+      let x = document.getElementById("12")
+      x.innerText = "Yes, we are accessible 24x7. But as of now, we don’t allow bookings starting or ending between 12 midnight and 4 am."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      l = 2;
+    }
+    else {
+      let x = document.getElementById("12")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      l = 1;
+    }
+
+  }
+
+
+
+  let m = 1
+  function faq13() {
+    if (m == 1) {
+      let x = document.getElementById("13")
+      x.innerText = "While we love pets, some of our customers might be allergic to them so we can’t allow pets in cars."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      m = 2;
+    }
+    else {
+      let x = document.getElementById("13")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      m = 1;
+    }
+
+  }
+
+
+  let n = 1
+  function faq14() {
+    if (n == 1) {
+      let x = document.getElementById("14")
+      x.innerText = "125 Kms/Hr is the speed limit. Exceeding it will attract a penalty for over-speeding. In some states (e.g., Karnataka, Maharashtra, Delhi-NCR), some cars might be equipped with speed governors, which will automatically restrict the speed to 80Kms/Hr. This is as per government directives."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      n = 2;
+    }
+    else {
+      let x = document.getElementById("14")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      n = 1;
+    }
+
+  }
+
+
+
+  let o = 1
+  function faq21() {
+    if (o == 1) {
+      let x = document.getElementById("21")
+      x.innerText = "Booking with us is quick and easy. You can make a booking through our app (android or iOS), website or by giving us a call at +91-9250035555. Just select your city, date and time of your trip, key in your location and choose the type of car you want. Then enter your payment details, confirm payment and you are ready to go!"
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      o = 2;
+    }
+    else {
+      let x = document.getElementById("21")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      o = 1;
+    }
+
+  }
+
+  let p = 1
+  function faq22() {
+    if (p == 1) {
+      let x = document.getElementById("22")
+      x.innerText = "You can modify or cancel your booking through either our app, website or by calling us. Our ability to modify/cancel the booking and the relevant charges depend upon your time of informing us and availability of cars. Please refer to our Fee policy for more details on the allowable modifications and applicable charges."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      p = 2;
+    }
+    else {
+      let x = document.getElementById("22")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      p = 1;
+    }
+
+  }
+
+
+  let q = 1
+  function faq23() {
+    if (q == 1) {
+      let x = document.getElementById("23")
+      x.innerText = "We understand that sometimes there can be last-minute changes in your plans, and we will try our best to accommodate them. But in situations where it can cause trouble to the next user (ie, the person whose booking starts after your ends), we cannot allow late returns. Please refer to our Fee policy for more details on late fees and extension charges"
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      q = 2;
+    }
+    else {
+      let x = document.getElementById("23")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      q = 1;
+    }
+
+  }
+
+
+
+
+  let r = 1
+  function faq24() {
+    if (r == 1) {
+      let x = document.getElementById("24")
+      x.innerText = "In case of shortening, we can try arranging an earlier pickup of the car, if you inform us at least 3 hours before your preferred pick-up time. However, no charges or refunds will be applicable on the base fare for the original trip."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      r = 2;
+    }
+    else {
+      let x = document.getElementById("24")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      r = 1;
+    }
+
+  }
+
+
+  let s = 1
+  function faq25() {
+    if (s == 1) {
+      let x = document.getElementById("25")
+      x.innerText = "Our prices include the rental charge, insurance and GST. You have the option of “with fuel” and “without fuel” pricing. In “with fuel” pricing, prices include fuel. In “without fuel” pricing, prices exclude fuel.Our prices do not include tolls, inter-state taxes and parking. No hidden charges!"
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      s = 2;
+    }
+    else {
+      let x = document.getElementById("25")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      s = 1;
+    }
+
+  }
+
+  let t = 1
+  function faq26() {
+    if (t == 1) {
+      let x = document.getElementById("26")
+      x.innerText = "For “with fuel” pricing: Prices include fuel. If you need to refuel during your journey, we will reimburse the cost. Just show the fuel bills to our delivery executive at the time of returning the car, and allow him to take a photograph of them. Please do NOT hand-over the original bill to the delivery executive, we will not be responsible for loss of bills handed over to the delivery executive. Please note that: Fuel bills need to be shown to our delivery executive at the time of return, we will NOT be able to reimburse fuel bills shared with us later.The fuel expense needs to reconcile reasonably with the distance travelled.The fuel expense needs to reconcile reasonably with the standard fuel efficiency of the car. For the purpose of this reconciliation and for the benefit of the user, we assume a lower mileage than what is defined by ARAI (Automotive Research Association of India).The date on the fuel bill should fall within the booking period.Hand-written fuel bills will be considered invalid.For “without fuel” pricing: Prices exclude fuel. In case you are returning the car at a lower fuel level than what was received, we will charge a flat Rs 500 refuelling service charge + actual fuel cost to get the tank to the same level as what was received."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      t = 2;
+    }
+    else {
+      let x = document.getElementById("26")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      t = 1;
+    }
+
+  }
+
+
+  let u = 1
+  function faq27() {
+    if (u == 1) {
+      let x = document.getElementById("27")
+      x.innerText = "You can only use one offer/promo per booking."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      u = 2;
+    }
+    else {
+      let x = document.getElementById("27")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+
+      u = 1;
+    }
+
+  }
+
+
+
+  let v = 1
+  function faq28() {
+    if (v == 1) {
+      let x = document.getElementById("28")
+      x.innerText = "A person who is having an International DL, can definitely create a booking with Revv under the condition that He/She must have an IDP (International Driving Permit) alongwith International DL and passport."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      v = 2;
+    }
+    else {
+      let x = document.getElementById("28")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      v = 1;
+    }
+
+  }
+
+
+  let x = 1
+  function faq31() {
+    if (x == 1) {
+
+      let y = document.getElementById("31")
+      y.innerText = "We accept payments by credit cards, debit cards, net-banking, UPI and popular wallets. Payments need to be made in advance through our website or mobile app."
+      y.style.backgroundColor = "rgb(241,241,241)"
+      y.style.marginTop = "-0.5%";
+      y.style.padding = "2%";
+      y.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      x = 2;
+    }
+    else {
+      let y = document.getElementById("31")
+      y.innerText = "";
+      y.style.backgroundColor = "";
+      y.style.marginTop = "";
+      y.style.padding = "";
+      y.style.padding = "";
+      y.style.boxShadow = "";
+      x = 1;
+    }
+
+  }
+
+
+  let y = 1
+  function faq32() {
+    if (y == 1) {
+
+      let x = document.getElementById("32")
+      x.innerText = "For “with fuel” pricing: If you need to refuel during your journey, we will reimburse the cost. Just show the fuel bills to our delivery executive at the time of returning the car, and allow him to take a photograph of them. Please do NOT hand-over the original bill to the delivery executive, we will not be responsible for loss of bills handed over to the delivery executive. Please note that:Fuel bills need to be shown to our delivery executive at the time of return, we will NOT be able to reimburse fuel bills shared with us later.The fuel expense needs to reconcile reasonably with the distance travelled.he fuel expense needs to reconcile reasonably with the standard fuel efficiency of the car. For the purpose of this reconciliation and for the benefit of the user, we assume a lower mileage than what is defined by ARAI (Automotive Research Association of India).The date on the fuel bill should fall within the booking period.Hand-written fuel bills will be considered invalid.For “without fuel” pricing: We give you a full tank, and we need the same back from you. Hence there is no need for any fuel reimbursements. In the rare instances where we give you less-than- full tank fuel, and you return us more fuel than what you got from us, we will reimburse the difference."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      y = 2;
+    }
+    else {
+      let x = document.getElementById("32")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      y = 1;
+    }
+
+  }
+
+  let z = 1
+  function faq33() {
+    if (z == 1) {
+      let x = document.getElementById("33")
+      x.innerText = "These expenses depend on your usage, hence you need to pay for them.Our cars are equipped with Fast tag devices for your convenience. The toll charges incurred during your trip will be billed to you in your invoice."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      z = 2;
+    }
+    else {
+      let x = document.getElementById("33")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      z = 1;
+    }
+
+  }
+
+  let a1 = 1
+  function faq34() {
+    if (a1 == 1) {
+      let x = document.getElementById("34")
+      x.innerText = "Yes."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      a1 = 2;
+    }
+    else {
+      let x = document.getElementById("34")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      a1 = 1;
+    }
+
+  }
+
+  let a2 = 1
+  function faq35() {
+    if (a2 == 1) {
+      let x = document.getElementById("35");
+      x.innerText = "All refunds are typically made within 10 days of completing the bookings. However, in some cases, there might be some procedural delays from the banks. Please do let us know in case your refund has not been credited to your account within 10 days and we will make sure we do everything we can to expedite it."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      a2 = 2;
+    }
+    else {
+      let x = document.getElementById("35");
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      a2 = 1;
+    }
+
+  }
+
+  let a3 = 1
+  function faq41() {
+    if (a3 == 1) {
+      let x = document.getElementById("41")
+      x.innerText = "While taking the delivery of your car, you will need to show your ORIGINAL Driving License and ID proof (same as the ones whose details you provided while making the booking). These documents will be verified for validity. In case these documents are unavailable/invalid/unverifiable, your booking will be subject to cancellation. Revv’s decision in this matter will be final and binding. Please note that driving license printed on A4 sheet of paper (original or otherwise) will not be considered as a valid document."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      a3 = 2;
+    }
+    else {
+      let x = document.getElementById("41")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      a3 = 1;
+    }
+
+  }
+
+  let a4 = 1
+  function faq42() {
+    if (a4 == 1) {
+      let x = document.getElementById("42")
+      x.innerText = "Our delivery executive will deliver the car to your doorstep. Before he hands- over the car to you, he will share with you a pre-filled checklist that summarises the car’s condition at that time. Please confirm the details in the checklist, sign it and you are good to go. In case any information in the checklist is not correct, please notify the delivery executive or call us."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      a4 = 2;
+    }
+    else {
+      let x = document.getElementById("42")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      a4 = 1;
+    }
+
+  }
+
+
+
+  let a5 = 1
+  function faq43() {
+    if (a5 == 1) {
+      let x = document.getElementById("43")
+      x.innerText = "In such cases, please notify us Revv immediately (by calling) and we will guide you through the entire process. We will coordinate with the road-side assistance and insurance. Unless unavoidable, please do not leave the scene of the accident until proper support has arrived. You may be required to file/sign formality documents associated with the accident."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      a5 = 2;
+    }
+    else {
+      let x = document.getElementById("43")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      a5 = 1;
+    }
+
+  }
+
+
+  let a6 = 1
+  function faq44() {
+    if (a6 == 1) {
+      let x = document.getElementById("44")
+      x.innerText = "On your return, please check-out from your booking using our app. You also have the option of calling us to notify. Even if you forget to notify us, you will be charged only till the actual end time of your booking."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      a6 = 2;
+    }
+    else {
+      let x = document.getElementById("44")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      a6 = 1;
+    }
+
+  }
+
+
+  let a7 = 1
+  function faq45() {
+    if (a7 == 1) {
+      let x = document.getElementById("45")
+      x.innerText = "Each State has different procedures and regulations. Most States will require a commercially registered vehicle to stop at the border RTO station to pay the relevant tolls/taxes. All Revv cars are equipped with original copies of the RC Card, Insurance Note, Self-Drive License, and the All India Permit, which will help you get through this conveniently. For many states, the state entry tax can be paid online as well."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      a7 = 2;
+    }
+    else {
+      let x = document.getElementById("45")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      a7 = 1;
+    }
+
+  }
+
+
+  let a8 = 1
+  function faq46() {
+    if (a8 == 1) {
+      let x = document.getElementById("46")
+      x.innerText = "Prices vary depending on State and vehicle type (larger vehicles have higher tolls/taxes)."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      a8 = 2;
+    }
+    else {
+      let x = document.getElementById("46")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      a8 = 1;
+    }
+
+  }
+
+
+
+
+  let a9 = 1
+  function faq47() {
+    if (a9 == 1) {
+      let x = document.getElementById("47")
+      x.innerText = "This should not occur since all of Revv's vehicles are equipped with all the necessary documents. In the event that an incident arises, please give us a call, and we will do our best to help you get back to driving"
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      a9 = 2;
+    }
+    else {
+      let x = document.getElementById("47")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      a9 = 1;
+    }
+
+  }
+
+
+
+  let a10 = 1
+  function faq48() {
+    if (a10 == 1) {
+      let x = document.getElementById("48")
+      x.innerText = "Well, we will do our best to help you find your belongings if you inform us soon enough. But as you can imagine, we cannot guarantee it since finding it back is not fully in our control. So, please check the car thoroughly before handing it back to us."
+      x.style.backgroundColor = "rgb(241,241,241)"
+      x.style.marginTop = "-0.5%";
+      x.style.padding = "2%";
+      x.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+      a10 = 2;
+    }
+    else {
+      let x = document.getElementById("48")
+      x.innerText = "";
+      x.style.backgroundColor = "";
+      x.style.marginTop = "";
+      x.style.padding = "";
+      x.style.padding = "";
+      x.style.boxShadow = "";
+      a10 = 1;
+    }
+
+  }
+
+
+
+  // --------------------------------------Expand & collapse functionality------------------------------------------------------
+
+  let ex = 1;
+  function expandall1() {
+    if (ex == 1) {
+      document.getElementById("expand1").innerText = "COLLAPSE ALL";
+      document.getElementById("expand2").innerText = "COLLAPSE ALL";
+      document.getElementById("expand3").innerText = "COLLAPSE ALL";
+      document.getElementById("expand4").innerText = "COLLAPSE ALL";
+
+      ex = 2;
+      a = 1, b = 1, c = 1, d = 1, e = 1, f = 1, g = 1, h = 1, i = 1, j = 1, k = 1, l = 1, m = 1, n = 1, o = 1, p = 1, q = 1, r = 1, s = 1, t = 1, u = 1, v = 1, x = 1, y = 1, z = 1, a1 = 1, a2 = 1,
+        a3 = 1, a4 = 1, a5 = 1, a6 = 1, a7 = 1, a8 = 1, a9 = 1, a10 = 1
+      faq1(), faq2(), faq3(), faq4(), faq5(), faq6(), faq7(), faq8(), faq9(), faq10(), faq11(), faq12(), faq13(), faq14(),
+        faq21(), faq22(), faq23(), faq24(), faq25(), faq26(), faq27(), faq28(),
+        faq31(), faq32(), faq33(), faq34(), faq35(),
+        faq41(), faq42(), faq43(), faq44(), faq45(), faq46(), faq47(), faq48()
+
+    }
+    else {
+      document.getElementById("expand1").innerText = "EXPAND ALL";
+      document.getElementById("expand2").innerText = "EXPAND ALL";
+      document.getElementById("expand3").innerText = "EXPAND ALL";
+      document.getElementById("expand4").innerText = "EXPAND ALL";
+      ex = 1;
+      a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, g = 0, h = 0, i = 0, j = 0, k = 0, l = 0, m = 0, n = 0, o = 0, p = 0, q = 0, r = 0, s = 0, t = 0, u = 0, v = 0, x = 0, y = 0, z = 0, a1 = 0, a2 = 0,
+        a3 = 0, a4 = 0, a5 = 0, a6 = 0, a7 = 0, a8 = 0, a9 = 0, a10 = 0
+      faq1(), faq2(), faq3(), faq4(), faq5(), faq6(), faq7(), faq8(), faq9(), faq10(), faq11(), faq12(), faq13(), faq14(),
+        faq21(), faq22(), faq23(), faq24(), faq25(), faq26(), faq27(), faq28(),
+        faq31(), faq32(), faq33(), faq34(), faq35(),
+        faq41(), faq42(), faq43(), faq44(), faq45(), faq46(), faq47(), faq48()
+    }
+
+  }
+
+
+
+  function expandall2() {
+    if (ex == 1) {
+      document.getElementById("expand1").innerText = "COLLAPSE ALL";
+      document.getElementById("expand2").innerText = "COLLAPSE ALL";
+      document.getElementById("expand3").innerText = "COLLAPSE ALL";
+      document.getElementById("expand4").innerText = "COLLAPSE ALL";
+      ex = 2;
+      a = 1, b = 1, c = 1, d = 1, e = 1, f = 1, g = 1, h = 1, i = 1, j = 1, k = 1, l = 1, m = 1, n = 1, o = 1, p = 1, q = 1, r = 1, s = 1, t = 1, u = 1, v = 1, x = 1, y = 1, z = 1, a1 = 1, a2 = 1,
+        a3 = 1, a4 = 1, a5 = 1, a6 = 1, a7 = 1, a8 = 1, a9 = 1, a10 = 1
+      faq1(), faq2(), faq3(), faq4(), faq5(), faq6(), faq7(), faq8(), faq9(), faq10(), faq11(), faq12(), faq13(), faq14(),
+        faq21(), faq22(), faq23(), faq24(), faq25(), faq26(), faq27(), faq28(),
+        faq31(), faq32(), faq33(), faq34(), faq35(),
+        faq41(), faq42(), faq43(), faq44(), faq45(), faq46(), faq47(), faq48()
+    }
+    else {
+      document.getElementById("expand1").innerText = "EXPAND ALL";
+      document.getElementById("expand2").innerText = "EXPAND ALL";
+      document.getElementById("expand3").innerText = "EXPAND ALL";
+      document.getElementById("expand4").innerText = "EXPAND ALL";
+      ex = 1;
+      a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, g = 0, h = 0, i = 0, j = 0, k = 0, l = 0, m = 0, n = 0, o = 0, p = 0, q = 0, r = 0, s = 0, t = 0, u = 0, v = 0, x = 0, y = 0, z = 0, a1 = 0, a2 = 0,
+        a3 = 0, a4 = 0, a5 = 0, a6 = 0, a7 = 0, a8 = 0, a9 = 0, a10 = 0
+      faq1(), faq2(), faq3(), faq4(), faq5(), faq6(), faq7(), faq8(), faq9(), faq10(), faq11(), faq12(), faq13(), faq14(),
+        faq21(), faq22(), faq23(), faq24(), faq25(), faq26(), faq27(), faq28(),
+        faq31(), faq32(), faq33(), faq34(), faq35(),
+        faq41(), faq42(), faq43(), faq44(), faq45(), faq46(), faq47(), faq48()
+    }
+
+  }
+
+  function expandall3() {
+    if (ex == 1) {
+      document.getElementById("expand1").innerText = "COLLAPSE ALL";
+      document.getElementById("expand2").innerText = "COLLAPSE ALL";
+      document.getElementById("expand3").innerText = "COLLAPSE ALL";
+      document.getElementById("expand4").innerText = "COLLAPSE ALL";
+      ex = 2;
+      a = 1, b = 1, c = 1, d = 1, e = 1, f = 1, g = 1, h = 1, i = 1, j = 1, k = 1, l = 1, m = 1, n = 1, o = 1, p = 1, q = 1, r = 1, s = 1, t = 1, u = 1, v = 1, x = 1, y = 1, z = 1, a1 = 1, a2 = 1,
+        a3 = 1, a4 = 1, a5 = 1, a6 = 1, a7 = 1, a8 = 1, a9 = 1, a10 = 1
+      faq1(), faq2(), faq3(), faq4(), faq5(), faq6(), faq7(), faq8(), faq9(), faq10(), faq11(), faq12(), faq13(), faq14(),
+        faq21(), faq22(), faq23(), faq24(), faq25(), faq26(), faq27(), faq28(),
+        faq31(), faq32(), faq33(), faq34(), faq35(),
+        faq41(), faq42(), faq43(), faq44(), faq45(), faq46(), faq47(), faq48()
+    }
+    else {
+      document.getElementById("expand1").innerText = "EXPAND ALL";
+      document.getElementById("expand2").innerText = "EXPAND ALL";
+      document.getElementById("expand3").innerText = "EXPAND ALL";
+      document.getElementById("expand4").innerText = "EXPAND ALL";
+      ex = 1;
+      a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, g = 0, h = 0, i = 0, j = 0, k = 0, l = 0, m = 0, n = 0, o = 0, p = 0, q = 0, r = 0, s = 0, t = 0, u = 0, v = 0, x = 0, y = 0, z = 0, a1 = 0, a2 = 0,
+        a3 = 0, a4 = 0, a5 = 0, a6 = 0, a7 = 0, a8 = 0, a9 = 0, a10 = 0
+      faq1(), faq2(), faq3(), faq4(), faq5(), faq6(), faq7(), faq8(), faq9(), faq10(), faq11(), faq12(), faq13(), faq14(),
+        faq21(), faq22(), faq23(), faq24(), faq25(), faq26(), faq27(), faq28(),
+        faq31(), faq32(), faq33(), faq34(), faq35(),
+        faq41(), faq42(), faq43(), faq44(), faq45(), faq46(), faq47(), faq48()
+    }
+
+  }
+
+  function expandall4() {
+    if (ex == 1) {
+      document.getElementById("expand1").innerText = "COLLAPSE ALL";
+      document.getElementById("expand2").innerText = "COLLAPSE ALL";
+      document.getElementById("expand3").innerText = "COLLAPSE ALL";
+      document.getElementById("expand4").innerText = "COLLAPSE ALL";
+      ex = 2;
+      a = 1, b = 1, c = 1, d = 1, e = 1, f = 1, g = 1, h = 1, i = 1, j = 1, k = 1, l = 1, m = 1, n = 1, o = 1, p = 1, q = 1, r = 1, s = 1, t = 1, u = 1, v = 1, x = 1, y = 1, z = 1, a1 = 1, a2 = 1,
+        a3 = 1, a4 = 1, a5 = 1, a6 = 1, a7 = 1, a8 = 1, a9 = 1, a10 = 1
+      faq1(), faq2(), faq3(), faq4(), faq5(), faq6(), faq7(), faq8(), faq9(), faq10(), faq11(), faq12(), faq13(), faq14(),
+        faq21(), faq22(), faq23(), faq24(), faq25(), faq26(), faq27(), faq28(),
+        faq31(), faq32(), faq33(), faq34(), faq35(),
+        faq41(), faq42(), faq43(), faq44(), faq45(), faq46(), faq47(), faq48()
+    }
+    else {
+      document.getElementById("expand1").innerText = "EXPAND ALL";
+      document.getElementById("expand2").innerText = "EXPAND ALL";
+      document.getElementById("expand3").innerText = "EXPAND ALL";
+      document.getElementById("expand4").innerText = "EXPAND ALL";
+      ex = 1;
+      a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, g = 0, h = 0, i = 0, j = 0, k = 0, l = 0, m = 0, n = 0, o = 0, p = 0, q = 0, r = 0, s = 0, t = 0, u = 0, v = 0, x = 0, y = 0, z = 0, a1 = 0, a2 = 0,
+        a3 = 0, a4 = 0, a5 = 0, a6 = 0, a7 = 0, a8 = 0, a9 = 0, a10 = 0
+      faq1(), faq2(), faq3(), faq4(), faq5(), faq6(), faq7(), faq8(), faq9(), faq10(), faq11(), faq12(), faq13(), faq14(),
+        faq21(), faq22(), faq23(), faq24(), faq25(), faq26(), faq27(), faq28(),
+        faq31(), faq32(), faq33(), faq34(), faq35(),
+        faq41(), faq42(), faq43(), faq44(), faq45(), faq46(), faq47(), faq48()
+    }
+
+  }
+
+  // page directiing
+function callmehyundai(){
+  event.preventDefault();
+  let obj = {
+    pageName : "./hyundai1.html"
+}
+localStorage.setItem("page",JSON.stringify(obj));
+window.location.href="./processing.html";
+}
+
+function callmemahindra(){
+  event.preventDefault();
+  let obj = {
+    pageName : "./mahindra1.html"
+}
+localStorage.setItem("page",JSON.stringify(obj));
+window.location.href="./processing.html";
+}
+
+function callmefaq() {
+  event.preventDefault();
+  let obj = {
+    pageName : "./faq.html"
+}
+localStorage.setItem("page",JSON.stringify(obj));
+window.location.href="./processing.html";
+}
+
+function callmelogin() {
+  event.preventDefault();
+  let obj = {
+    pageName : "./login.html"
+}
+localStorage.setItem("page",JSON.stringify(obj));
+window.location.href="./processing.html";
+}
+
+  // ------------------linking of login page to the index page----------//
+
+document.querySelector("#login_bar").addEventListener("click",function(){
+  window.location.href="login.html"
+})
+
+let login_data;
+if(localStorage.getItem("loginUser")==null){
+  login_data=[];
+}else{
+  login_data = JSON.parse(localStorage.getItem("loginUser"));
+
+}
+let loginUserName = document.getElementById("login_bar")
+if(login_data!=null){
+  loginUserName.innerText=login_data[login_data.length-1].Email
+}
+console.log(login_data)
+
+</script>
