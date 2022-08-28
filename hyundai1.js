@@ -224,3 +224,8 @@ else{
 
    
 }
+function cityname()
+{
+   let name=document.getElementById("selectcity").value;
+   document.getElementById("heading").innerText=`Hyundai Cars Subscription in ${name}`
+}
