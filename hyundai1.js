@@ -198,3 +198,8 @@ function left() {
 function faqpage(){
    window.location.href="faq.html"
 }
+
+function indexpage()
+{
+   window.location.href="index.html" 
+}
